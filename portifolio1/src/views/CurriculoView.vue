@@ -11,7 +11,7 @@
  import HelloWorld from '@/components/HelloWorld.vue';
  
  export default {
-   name: 'ContatosView',
+   name: 'CurriculoView',
    components: {
      HelloWorld
    },
@@ -26,12 +26,4 @@
  
  <style>
  
- .titulo {
-   margin: 5rem;
-   color: blueviolet;
-  text-shadow: 0px 0px 4px blueviolet;
-  display: flex;
-   justify-content: center;
- }
-
  </style>

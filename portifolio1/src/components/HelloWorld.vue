@@ -18,6 +18,9 @@ body {
   color: aliceblue;
   padding: 0;
   margin: 0;
+  font-family: "Tauri", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 </style>
