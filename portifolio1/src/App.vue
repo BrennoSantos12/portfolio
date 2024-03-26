@@ -23,10 +23,12 @@
   justify-content: center;
   align-items: center;
   gap: 40px;
+  
 }
 .menu-link {
   text-decoration: none;
   color: #F2B279;
+  font-weight: 800;
 }
 .menu-link:hover {
   color: hsl(28, 91%, 58%);
