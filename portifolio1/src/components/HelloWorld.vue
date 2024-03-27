@@ -14,7 +14,7 @@ export default {
 
 <style>
 body {
-  background-image: linear-gradient(to bottom, rgb(33, 33, 33) 90%, rgb(14, 14, 14) 10%);
+  background-color: rgb(31, 31, 31);
   color: aliceblue;
   padding: 0;
   margin: 0;

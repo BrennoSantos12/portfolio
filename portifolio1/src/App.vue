@@ -32,7 +32,7 @@
 }
 .menu-link:hover {
   color: hsl(28, 91%, 58%);
-  font-size: 1.1rem;
+  font-size: 1rem;
   transition: font-size 0.3s;
 }
 </style>
