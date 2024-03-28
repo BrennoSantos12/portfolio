@@ -1,7 +1,7 @@
 <template>
   <div>
   </div>
-
+ 
 </template>
 
 <script>
@@ -13,6 +13,7 @@ export default {
 
 
 <style>
+
 body {
   background-color: rgb(31, 31, 31);
   color: aliceblue;
