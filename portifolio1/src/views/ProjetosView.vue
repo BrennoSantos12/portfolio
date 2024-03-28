@@ -1,37 +1,15 @@
 <template>
-
-  <section class="skill-section">
-    <div class="container">
-  <div class="skill-box">
-    <div class="skill-text">
-  <h1>Skills</h1>
-      <div class="bar-text">
-  <h1 class="html">html 60%</h1>
-  <div :class="bar" style="background-image: linear-gradient(to right, rgb(111, 0, 111) 60%, rgb(118, 84, 118) 10%);"></div>
-  <br>
-  <h1 class="css">css 40%</h1>
-  <div :class="bar" style="background-image: linear-gradient(to right, rgb(111, 0, 111) 40%, rgb(118, 84, 118) 10%);"></div>
-  <br>
-  <h1 class="js">javascript 30%</h1>
-  <div :class="bar" style="background-image: linear-gradient(to right, rgb(111, 0, 111) 30%, rgb(118, 84, 118) 10%);"></div>
-  <br>
-  <h1 class="nd">node 20%</h1>
-  <div :class="bar" style="background-image: linear-gradient(to right, rgb(111, 0, 111) 20%, rgb(118, 84, 118) 10%);"></div>
-  <br>
-  <h1 class="vue">vue 20%</h1>
-  <div :class="bar" style="background-image: linear-gradient(to right, rgb(111, 0, 111) 20%, rgb(118, 84, 118) 10%);"></div>
-      </div>
-  </div>
-</div>
 <div class="projetos-container">
-  <div class="projetos-box">
-<div class="projetos1"></div>
-<div class="projetos2"></div>
-<div class="projetos3"></div>
-  </div>
+  <div class="projetos"><p class="projetos-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum et natus beatae, excepturi maiores vel labore fugiat corrupti architecto reiciendis nam culpa. Suscipit tenetur, dignissimos odio amet magnam repellat ducimus!</p></div>
+  
+  <div class="projetos"><p class="projetos-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur aliquam qui vel amet dolore dolorem porro hic sed, dolor nam quas debitis minima unde non commodi ratione exercitationem eius magni!</p></div>
+  
+  <div class="projetos"><p class="projetos-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt nemo nihil recusandae placeat delectus, excepturi facilis porro voluptatem officiis, eum quibusdam debitis, perspiciatis beatae ipsa ratione sunt quis harum at!</p> </div>
+ 
+ 
 </div>
-</div>
-</section>
+
+
 </template>
 
 <script>
@@ -42,7 +20,7 @@ export default {
   },
   data() {
     return {
-   bar: 'bar',
+  
     }
   }
 }
@@ -54,77 +32,31 @@ export default {
 .skill-section {
   min-height: 100vh;
 }
-.container {
-  display: flex;
-  justify-content: space-between;
-  margin: 15rem;
-}
-.skill-box {
-  display: flex;
-  text-align: center;
-  justify-content: center;
-}
-.skill-text {
-  display: flex;
-  flex-direction: column;
-}
-.bar-text {
-  font-size: 0.8rem;
-}
-.bar{
-  display: flex;
-  justify-content: center;
-  width: 15rem;
-  height: 10px;
-  border-radius: 10px;
-}
-.html {
-  word-spacing: 8rem;
-}
-.css {
-  word-spacing: 8.8rem;
-}
-.js {
-  word-spacing: 4.4rem;
-}
-.nd {
-  word-spacing: 7.8rem;
-}
-.vue {
-  word-spacing: 8.8rem;
-}
 .projetos-container {
   display: flex;
-  justify-content: center;
-}
-.projetos-box {
-  display: flex;
   flex-direction: column;
-   gap: 10rem;
+  align-items: center;
+  gap: 15rem;
+  margin: 7rem;
 }
-.projetos1 {
-  background-color: black;
-  height: 350px;
-  width: 350px;
+.projetos-text {
+  margin-top: 100%;
+  margin-left: 10%;
 }
-.projetos2 {
-  background-color: black;
-  height: 350px;
-  width: 350px;
-}
-.projetos3 {
-  background-color: black;
-  height: 350px;
-  width: 350px;
+.projetos{
+  display: flex;
+  background-color: rgb(202, 35, 35);
+  height: 250px;
+  width: 250px;
 }
 @media screen and (max-width: 700px){
-  .container {
+  .projetos-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin: 5rem;
     align-items: center;
-    gap: 10rem;
+    margin: 5rem;
+    gap: 15rem;
   }
 }
 </style>
