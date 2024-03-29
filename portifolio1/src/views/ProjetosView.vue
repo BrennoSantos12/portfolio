@@ -1,15 +1,14 @@
 <template>
+
 <div class="projetos-container">
-  <div class="projetos"><p class="projetos-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum et natus beatae, excepturi maiores vel labore fugiat corrupti architecto reiciendis nam culpa. Suscipit tenetur, dignissimos odio amet magnam repellat ducimus!</p></div>
-  
-  <div class="projetos"><p class="projetos-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur aliquam qui vel amet dolore dolorem porro hic sed, dolor nam quas debitis minima unde non commodi ratione exercitationem eius magni!</p></div>
-  
-  <div class="projetos"><p class="projetos-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt nemo nihil recusandae placeat delectus, excepturi facilis porro voluptatem officiis, eum quibusdam debitis, perspiciatis beatae ipsa ratione sunt quis harum at!</p> </div>
- 
- 
+  <img src="..\assets\projetoportfolio.png" alt="portfolio-projeto" class="projetos-img"><p class="projetos-text">No intuito de ser simples o meu portfolio foi um projeto muito delicado de se trabalhar, a primeira amostra para o mundo das minhas habilidades de design e programação.</p>
+
+ <div class="projetos">em breve</div>
+
+ <div class="projetos">em breve</div>
+
 </div>
-
-
+<h4 class="create">@create BY Brenno Santos</h4>
 </template>
 
 <script>
@@ -29,6 +28,28 @@ export default {
 </script>
 
 <style>
+.projetos {
+  display: flex;
+  justify-content: center;
+  background-color: rgb(51, 10, 68);
+  box-shadow:0px 0px 10px rgb(0, 0, 0) ;
+  height: 250px;
+  width: 350px;
+  text-align: center;
+  align-items: center;
+ font-size: 3rem;
+ border-radius: 10px;
+ margin: 7rem;
+}
+.projetos-img {
+  display: flex;
+  justify-content: center;
+  box-shadow:0px 0px 10px rgb(0, 0, 0) ;
+
+  height: 250px;
+  width: 350px;
+ border-radius: 10px;
+}
 .skill-section {
   min-height: 100vh;
 }
@@ -36,18 +57,14 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 15rem;
   margin: 7rem;
+  gap: 10px;
 }
 .projetos-text {
-  margin-top: 100%;
-  margin-left: 10%;
-}
-.projetos{
   display: flex;
-  background-color: rgb(202, 35, 35);
-  height: 250px;
-  width: 250px;
+  width: 20rem;
+  margin: 0.1rem;
+  
 }
 @media screen and (max-width: 700px){
   .projetos-container {
@@ -55,8 +72,29 @@ export default {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 5rem;
-    gap: 15rem;
+ 
+  }
+  .projetos-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 260px;
+    height:200px ;
+  }
+  .projetos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 260px;
+    height:200px ;
+    font-size: 2rem;
+  }
+  .projetos-text {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    width: 20rem;
+    font-size: 0.8rem;
   }
 }
 </style>
