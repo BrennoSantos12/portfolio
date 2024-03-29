@@ -1,7 +1,6 @@
 <template>
-  <div>
-  </div>
  
+<div></div>
 </template>
 
 <script>
@@ -15,7 +14,7 @@ export default {
 <style>
 
 body {
-  background-color: rgb(31, 31, 31);
+  background-color: rgb(37, 37, 37);
   color: aliceblue;
   padding: 0;
   margin: 0;
