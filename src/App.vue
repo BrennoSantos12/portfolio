@@ -18,7 +18,7 @@
   display: flex;
   height: 4rem;
   width: 100%;
-  background-color: #0D0E26;
+  background-color: rgb(61, 21, 83);
   justify-content: center;
   align-items: center;
   gap: 40px;
@@ -26,7 +26,7 @@
 }
 .menu-link {
   text-decoration: none;
-  color: #F2B279;
+  color: aliceblue;
   font-weight: 800;
 }
 .menu-link:hover {

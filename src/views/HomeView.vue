@@ -89,14 +89,14 @@ margin: 5rem;
   text-decoration: none;
   color: aliceblue;
   background-color: rgb(61, 21, 83);
-  box-shadow:0px 0px 10px rgb(0, 0, 0) ;
+  box-shadow:0px 2px 4px rgb(0, 0, 0) ;
   height: 4rem;
   width: 9rem;
   border-radius: 10px;
   transition: transform 0.3s ease;
 }
 .botao:hover {
-  text-shadow: 0px 0px 10px rgb(174, 174, 245);
+  text-shadow: 0px 0px 6px rgb(174, 174, 245);
   transform: scale(0.8);
 }
 @media screen and (max-width: 1047px) {
