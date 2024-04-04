@@ -3,7 +3,7 @@
 
   createApp({
     setup() {
-      const message = ref('Hello vue!')
+      const message = ref('portfolio!')
       return {
         message
       }

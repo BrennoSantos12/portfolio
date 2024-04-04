@@ -1,14 +1,14 @@
 <template>
 
 <div class="projetos-container">
-  <img src="..\assets\projetoportfolio.png" alt="portfolio-projeto" class="projetos-img"><p class="projetos-text">No intuito de ser simples o meu portfolio foi um projeto muito delicado de se trabalhar, a primeira amostra para o mundo das minhas habilidades de design e programação.</p>
+  <img src="..\assets\projetoportfolio.png" alt="portfolio-projeto" class="projetos-img"><p class="projetos-text">Meu portfólio foi meu primeiro desafio, no qual busquei encontrar um equilíbrio usando um design minimalista e responsivo.</p>
 
- <div class="projetos">em breve</div>
+ <div class="projetos">Em breve</div>
 
- <div class="projetos">em breve</div>
+ <div class="projetos">Em breve</div>
 
 </div>
-<h4 class="create">@create BY Brenno Santos</h4>
+<h4 class="create">@Create by Brenno Santos</h4>
 </template>
 
 <script>

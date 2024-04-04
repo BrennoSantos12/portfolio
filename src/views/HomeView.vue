@@ -3,12 +3,19 @@
  
   <div class="home">
     <div class="home-box">
-  <h1>Olá, eu me chamo <span>Brenno</span> e sou Front-End developer.</h1>
-  <p class="textinho">Atualmente estou estudando Analise e Desenvolvimento De Sistemas na  FATEC SENAI, 
-    almejo no futuro me tornar um programador full-stack. Nesse momento busco aventuras  no mundo do Front-End onde 
-    possa mostrar minhas habilidades de design e código.</p>
+  <h1 class="home-h1">Olá, eu me chamo <span>Brenno</span><br> e sou Front-End developer.</h1>
+  <p class="home-p">Estudo Análise e Desenvolvimento de Sistemas na FATEC- SENAI e estou trilhando meu caminho
+     para me tornar um programador Full-Stack. Busco aventuras e desafios no mundo do Front-End para mostrar
+      minhas habilidades de design 
+    e código e explorar todo meu potencial.
+Confira meu portfólio e vamos criar juntos! 
+</p>
+
   </div>
-  <div class="linguagens">
+  <section class="linguagens-position">
+  <div class="linguagens-decoration">
+  <h1 class="linguagens-text">Algumas tecnologias que eu utilizo.</h1>
+  <div class="linguagens-box">
     <img src="../assets/html_icon.png" alt="html" class="img-linguagens">
     <img src="../assets/css_icon.png" alt="css" class="img-linguagens">
     <img src="../assets/javascript_icon.png" alt="javascript" class="img-linguagens">
@@ -16,14 +23,16 @@
     <img src="../assets/vue_icon.png" alt="vue.js" class="img-linguagens">
   </div>
 </div>
+</section>
+</div>
     
 <div class="contatos">
-      <a href="../files/CV- Brenno Santos.pdf" alt="download curriculo" download :class="botao">Curriculo</a> 
-     <a href="https://www.linkedin.com/in/brenno-santos-692752290/" alt="linkedin link" :class="botao">Linkedin</a>
+      <a href="../files/CV- Brenno Santos.pdf" alt="download curriculo" download :class="botao">Currículo</a> 
+     <a href="https://www.linkedin.com/in/brenno-santos-692752290/" alt="linkedin link" :class="botao">LinkedIn</a>
      <a href="https://github.com/BrennoSantos12" alt="github link" :class="botao">GitHub</a>
    </div>
   
-  <h4 class="create">@create BY Brenno Santos</h4>
+  <h4 class="create">@Create by Brenno Santos</h4>
 </template>
 
 <script >
@@ -49,25 +58,43 @@ export default {
 .home {
   margin: 4.5rem;
   display: flex;
+  flex-direction: column;
  justify-content: center;
-  font-size: 1.2rem;
+  font-size: 1rem;
   gap: 10px;
 }
 .home-box {
  display: flex;
+ align-items: center;
+ justify-content: center;
  flex-direction: column;
+ margin: 3rem;
 }
-.textinho {
+
+.home-p {
   font-size: 1rem;
+  letter-spacing: 0.1rem;
 }
 span {
   color: blueviolet;
 }
-.linguagens {
+.linguagens-decoration {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.linguagens-text {
+  display: flex;
+  justify-content: center;
+  margin: 3rem;
+  color: blueviolet;
+  
+}
+.linguagens-box {
 display: flex;
 justify-content: center;
 gap: 2rem;
-margin: 5rem;
 }
 .img-linguagens {
   display: flex;
@@ -75,11 +102,13 @@ margin: 5rem;
   height: 70px;
   width: 70px;
 }
+.linguagens-position {
+ margin-bottom: 4rem;
+}
 .contatos {
   font-size: 1.5rem;
   display: flex;
   justify-content: center;
-  align-items: baseline;
   gap: 5rem;
 }
 .botao {
@@ -101,11 +130,28 @@ margin: 5rem;
 }
 @media screen and (max-width: 1047px) {
   .home {
-    margin: 4rem;
-    text-align: center;
     font-size: 1rem;
     display: flex;
     flex-direction: column;
+    text-align: center;
+  }
+  .home-h1 {
+    font-size: 2rem;
+    width: 200%;
+  }
+  .home-p {
+    width: 200%; 
+    font-size: 0.7rem;
+  }
+.linguagens-position {
+    display: flex;
+    justify-content: center;
+  }
+  .linguagens-text {
+    display: flex;
+    align-self: center;
+    font-size: 1.1rem;
+    width: 100%;
   }
   .img-linguagens {
     display: flex;
