@@ -1,37 +1,75 @@
 <template>
-  <div class="fixed">
-  <nav class="menu-box">
-    <router-link to="/" class="menu-link">Home</router-link>     
-    <router-link  to="/projetos" class="menu-link">Projetos</router-link>      
-  </nav>
-  </div>
-  <router-view/>
+
+  
+  <section id="Home">
+   
+    <div class="titulo-container">
+      <h1 class="titulo">Brenno Santos</h1>
+      <h2 class="sub-titulo">Futuro Full-Stack <br>Developer</h2>
+    </div>
+    <TopMenu/>
+   
+  </section>
+    <section id="Sobre">
+     asdadas
+    </section>
+    <section id="Projetos">
+asd
+    </section>
+    <section id="Contatos">
+
+    </section>
+
+    
 </template>
 
+<script >
+
+import TopMenu from '@/components/TopMenu.vue';
+
+
+export default {
+  name: 'App',
+  components: {
+    TopMenu,
+  },
+ 
+}
+</script>
 <style>
-.fixed {
- position: fixed;
- top: 0;
- width: 100%;
+html {
+  scroll-behavior: smooth;
 }
-.menu-box {
-  display: flex;
-  height: 4rem;
-  width: 100%;
-  background-color: rgb(61, 21, 83);
-  justify-content: center;
-  align-items: center;
-  gap: 40px;
-  
+body {
+  background-color: rgb(67, 19, 103);
+  padding: 0;
+  margin: 0;
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
-.menu-link {
-  text-decoration: none;
+
+@media screen and (max-width: 600px) {
+  section {
+    height: 200vw;
+  }
+  #Home {
+    min-height: 300vw;
+  }
+}
+#Home {
+  min-height: 50vw;
   color: aliceblue;
-  font-weight: 800;
+  background-color: rgb(67, 19, 103);
+
 }
-.menu-link:hover {
-  color: hsl(28, 91%, 58%);
-  font-size: 1rem;
-  transition: font-size 0.3s;
+#Home .titulo-container { 
+ display: flex;
+ flex-direction: column;
+ margin: 3rem;
 }
+#Home .titulo {
+  font-size: 3rem;
+}
+
 </style>
