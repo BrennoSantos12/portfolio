@@ -22,18 +22,19 @@ asd
 
     
 </template>
-
 <script >
 
 import TopMenu from '@/components/TopMenu.vue';
 
+   
 
 export default {
   name: 'App',
   components: {
     TopMenu,
+  
   },
- 
+  
 }
 </script>
 <style>
@@ -47,6 +48,7 @@ body {
   font-family: "Bebas Neue", sans-serif;
   font-weight: 400;
   font-style: normal;
+
 }
 
 @media screen and (max-width: 600px) {
@@ -70,6 +72,24 @@ body {
 }
 #Home .titulo {
   font-size: 3rem;
+  transform: translateX(0px);
+  animation: titulo 1s ease-in-out;
+ 
 }
-
+#Home .sub-titulo {
+  transform: translateY(-40px);
+  animation: sub-titulo 1.5s ease-in-out;
+}
+@keyframes titulo {
+  0% {opacity: 0;
+    transform: translateX(-150px);}
+    50% {opacity: 0; }
+    100% {opacity: 1;}
+    }
+@keyframes sub-titulo {
+  0% {opacity: 0;
+    transform: translateY(100px);}
+    50% {opacity: 0;}
+    100% {opacity: 1;}
+    }
 </style>
