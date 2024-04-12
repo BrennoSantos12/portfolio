@@ -1,6 +1,6 @@
 <template>
  
-   <div id="myNav" class="overlay">
+   <div id="myNav" class="overlay" >
     <a href="javascript:void(0)" class="closebtn" @click="closeNav()">&times;</a>
     <div class="overlay-content">
       <a href="#Home">Home</a>
@@ -10,10 +10,10 @@
     </div>
   </div>
  
-  <span style="font-size:40px; cursor:pointer" id="btn" @click="openNav()">&#9776;</span>
-  <div class="link">
-    <a href="https://github.com/BrennoSantos12"><img src="@\assets\github.png" alt="GitHub" style="height: 4.5rem; width: 4.5rem;"></a> 
-   <a href="https://www.linkedin.com/in/brenno-santos-692752290/"><img src="@\assets\LinkedIn.png" alt="LinkedIn" style="height: 4rem; width: 4rem;"></a>
+  <span style="font-size:40px; cursor:pointer" id="btn" @click="openNav()"  v-motion-slide-right :delay="900">&#9776;</span>
+  <div class="link" >
+    <a v-motion-slide-left :delay="900" href="https://github.com/BrennoSantos12"><img src="@\assets\github.png" alt="GitHub" style="height: 4.5rem; width: 4.5rem;"></a> 
+   <a v-motion-slide-right :delay="900" href="https://www.linkedin.com/in/brenno-santos-692752290/"><img src="@\assets\LinkedIn.png" alt="LinkedIn" style="height: 4rem; width: 4rem;"></a>
     </div>
 </template>
 
@@ -45,15 +45,8 @@ export default {
   z-index: 1;
   top: 0;
   right: 0;
-  animation: btn 2s ease-in-out;
 }
-@keyframes btn {
-  0% {opacity: 0;
-    transform: translateX(300px);}
-    70% {opacity: 0;
-      }
-    100% {opacity: 1;}
-    }
+
 .overlay {
   height: 100%;
   width: 0;
@@ -95,31 +88,23 @@ export default {
   font-size: 60px;
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 600px) {
   .overlay a {font-size: 20px}
   .overlay .closebtn {
   font-size: 40px;
   top: 15px;
   right: 35px;
   }
+ 
 }
 .link {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
   margin: 2rem;
-  margin-top: -9rem;
+  margin-top: -13rem;
   gap: 40px;
-  transform: translateX(0px);
-  animation: link 2s ease-in-out;
-
+  
 }
-@keyframes link {
-  0% {opacity: 0;
-     gap: 1px;
-    transform: translateX(-400px);}
-    50% {opacity: 0;
-      }
-    100% {opacity: 1;}
-    }
+
 </style>
