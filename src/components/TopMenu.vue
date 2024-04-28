@@ -1,5 +1,5 @@
 <template>
- 
+ <div class="top-container">
    <div id="myNav" class="overlay" >
     <a href="javascript:void(0)" class="closebtn" @click="closeNav()">&times;</a>
     <div class="overlay-content">
@@ -10,11 +10,12 @@
     </div>
   </div>
  
-  <span style="font-size:40px; cursor:pointer" id="btn" @click="openNav()"  v-motion-slide-right :delay="900">&#9776;</span>
+  <span style="font-size:40px; cursor:pointer" id="btn" @click="openNav()">&#9776;</span>
   <div class="link" >
-    <a v-motion-slide-left :delay="900" href="https://github.com/BrennoSantos12"><img src="@\assets\github.png" alt="GitHub" style="height: 4.5rem; width: 4.5rem;"></a> 
-   <a v-motion-slide-right :delay="900" href="https://www.linkedin.com/in/brenno-santos-692752290/"><img src="@\assets\LinkedIn.png" alt="LinkedIn" style="height: 4rem; width: 4rem;"></a>
+    
+   
     </div>
+  </div>
 </template>
 
 
@@ -38,6 +39,7 @@ export default {
 
 
 <style>
+
 #btn {
   color: aliceblue;
   position: fixed;
@@ -45,6 +47,7 @@ export default {
   z-index: 1;
   top: 0;
   right: 0;
+  animation: animacao-right 1.5s ease-in-out;
 }
 
 .overlay {
@@ -95,16 +98,9 @@ export default {
   top: 15px;
   right: 35px;
   }
- 
-}
-.link {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  margin: 2rem;
-  margin-top: -13rem;
-  gap: 40px;
   
+
 }
+
 
 </style>
