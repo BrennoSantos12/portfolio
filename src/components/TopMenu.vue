@@ -57,8 +57,8 @@ export default {
   z-index: 1;
   top: 0;
   right: 0;
-  opacity: 0.5;
   background-color: black;
+  opacity: 0.5;
   overflow-x: hidden;
   transition: 0.5s;
 }
@@ -68,7 +68,6 @@ export default {
   top: 25%;
   width: 100%;
   text-align: center;
-  margin-top: 30px;
 }
 
 .overlay a {

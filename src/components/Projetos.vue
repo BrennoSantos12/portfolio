@@ -3,9 +3,7 @@
     <div class="projeto" id="projeto1" v-motion-slide-visible-left :delay="100">
         <div class="projeto-esquerda">
         <h1 class="titulo1">Portfólio</h1>
-        <p class="texto-esconder">Lorem ipsum, dolor sit amet consectetur adipisicing <br> 
-            elit. Soluta eveniet quas accusamus ex laudantium <br>
-            aliquam brcorporis atque</p>
+        <p class="texto-esconder">Meu portfólio foi meu primeiro desafio, no qual <br>busquei encontrar um equilíbrio usando um design <br> minimalista e responsivo.</p>
     </div>
     <div class="centro-esconder">
         <p>clique na imagem para ir até o site</p>
@@ -23,11 +21,11 @@
 
     <div class="projeto" id="projeto2" v-motion-slide-visible-left :delay="400">
         <div class="projeto-esquerda">
-        <h1 class="titulo1">EM BREVE</h1>
-        <p class="texto-esconder">EM BREVE</p>
+        <h1 class="titulo1">Oliveira e <br> Mascarenhas</h1>
+        <p class="texto-esconder">Advogados associados</p>
     </div>
     <div class="centro-esconder">
-        <a ><img ></a>
+        <a ><img src="@\assets\embreve.jpg" style="border-radius: 10px;" alt="em breve" class="img" id="img" ></a>
     </div>
         <div class="saiba-direita">
          <h3 class="saiba">clique para saber mais</h3>
@@ -57,14 +55,18 @@
     </div>
 
 
+
+
 </template>
 
 <style>
 
-
+#Projetos {
+  min-height: 100%;
+}
 .projeto {
     color: rgba(240, 248, 255, 0.849);
-    background-color: rgb(67, 19, 103);
+    background-color: rgb(49, 14, 76);
     width: 100%;
     height: 10rem;
     display: flex;
@@ -79,15 +81,22 @@
     color: rgb(255, 255, 255);
     text-shadow: 0px 0px 4px rgba(0, 0, 0);
   }
+
+  .expandir {
+    height: 24rem;
+    background: rgb(47,0,47);
+    background: linear-gradient(90deg, rgba(47,0,47,1) 0%, rgba(129,32,130,1) 30%, rgba(72,8,82,1) 100%);
+  }
+
   .titulo1 {
-    font-size: 4rem;
+    font-size: 3rem;
     transition: opacity 0.2s ease-in-out;
   }
   
   
   @media screen and (max-width: 800px) {
     .titulo1 {
-      font-size: 1.5rem;
+      font-size: 1.3rem;
     }
   .saiba {
     font-size: 1rem;
@@ -96,13 +105,10 @@
     display: flex;
     flex-direction: column;
     text-align: center;
-
-    
   }
-  .projeto-esquerda {
+  .projeto p {
     font-size: 0.8rem;
-    
-}
+  }
 
 .img {
     width:  150px;
@@ -114,8 +120,9 @@
     font-size: 0.8rem;
   }
   .linguagem {
-    width: 20px;
-    height: 20px;
+    width: 30px;
+    height: 30px;
+    margin: 5px
   }
   
   }
@@ -127,7 +134,9 @@
         border: 4px solid rgb(26, 23, 28);
       }
   }
-  
+  .linguagem {
+    margin: 2px
+  }
   
   
   .saiba-direita {
@@ -136,10 +145,7 @@
   }
   
   
-  .expandir {
-    height: 24rem;
-    background: linear-gradient(to right, rgb(67, 19, 103), rgb(122, 42, 183), grey);
-  }
+  
   
   
   .texto-esconder {
@@ -174,6 +180,8 @@ export default {
     const card = document.querySelectorAll('.projeto');
 
 card.forEach(projeto => {
+
+ 
   const titulo1 = projeto.querySelector('.titulo1');
   const esquerda = projeto.querySelector('.texto-esconder');
   const centro = projeto.querySelector('.centro-esconder');
@@ -196,8 +204,7 @@ card.forEach(projeto => {
       direita.style.opacity = '1';
       saiba.style.opacity = '0';
     }, 300);
-
-    
+  
     esquerda.style.display = 'block';
     saiba.style.display = 'none';
     centro.style.display = 'block';
