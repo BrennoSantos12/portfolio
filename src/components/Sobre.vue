@@ -1,0 +1,99 @@
+<template>
+    <div class="sobre-container">
+        <h1 class="sobre-titulo" v-motion-slide-visible-left :delay="300">
+         Estudo Análise e Desenvolvimento de Sistemas na FATEC- SENAI e estou
+          trilhando meu caminho para me tornar um programador Full-Stack. Busco aventuras e desafios 
+          no mundo do Front-End para mostrar minhas habilidades de design e código e explorar todo meu 
+          potencial. Confira meu portfólio e vamos criar juntos!</h1>
+   
+          <button class="button">Saiba mais sobre mim</button>
+        </div>
+
+</template>
+
+<style>
+
+#Sobre{
+    color: white;
+    background-color: rgb(26, 23, 28);
+    height: 40vw;
+    display: flex;
+    align-items: center;
+  }
+#Sobre .sobre-container {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   text-align: center;
+   gap: 2rem;
+}
+#Sobre .sobre-titulo {
+  font-size: 1rem;
+  width: 40%;
+  overflow-wrap: break-word;
+}
+.button {
+  --color: #6300a9;
+  padding: 1em 1.6em;
+  background-color: transparent;
+  border-radius: 0.3em;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: 0.5s;
+  font-weight: 400;
+  font-size: 17px;
+  border: 1px solid;
+  text-transform: uppercase;
+  color: var(--color);
+  z-index: 1;
+ }
+ 
+  .button::after {
+  content: '';
+  display: block;
+  width: 50px;
+  height: 50px;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  border-radius: 50%;
+  z-index: -1;
+  background-color: var(--color);
+  transition: 1.1s ease;
+ }
+
+ .button::after {
+  left: calc(40% + 1em);
+  top: calc(200% + 1em);
+ }
+ 
+ .button:hover::before, .button:hover::after {
+  height: 410px;
+  width: 410px;
+ }
+ 
+ .button:hover {
+  color: rgb(74, 2, 74);
+  filter: brightness(0.9);
+  animation: button 0.9s ease-in-out;
+ }
+
+ @media screen and (max-width: 600px) {
+       
+  #Sobre {
+    min-height: 100vw;
+  }
+  #Sobre .sobre-titulo {
+    font-size: 0.8rem;
+    width: 80%;
+    overflow-wrap: break-word;
+  }
+  
+ }
+</style>
+
+<script>
+export default {
+    name: 'SobreVue',
+}
+</script>
