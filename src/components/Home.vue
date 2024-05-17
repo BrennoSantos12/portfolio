@@ -26,18 +26,22 @@
   #Home .titulo-container { 
    display: flex;
    justify-content: space-between;
+   margin-top: 4rem;
   
   }
   #Home .titulo {
     font-size: 5rem;
     animation: animacao-left 1s ease-in-out;
+  
   }
   #Home .sub-titulo-container {
     display: flex;
     justify-content: space-between;
     margin-left: 3rem;
+    gap: 2rem;
   }
   #Home .sub-titulo {
+    margin-top: 4rem;
     animation: animacao-top 1.2s ease-in-out;
   }
   #Home .link-container {
@@ -80,10 +84,10 @@
         flex-direction: initial;
       }
       #Home .link2 {
-        animation: animacao-left 1.2s ease-in-out;
+        animation: animacao-right 1.2s ease-in-out;
       }
       #Home .link1 {
-        animation: animacao-right 1.2s ease-in-out;
+        animation: animacao-left 1.2s ease-in-out;
       }
   }
 

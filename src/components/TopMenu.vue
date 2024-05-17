@@ -97,7 +97,9 @@ export default {
   top: 15px;
   right: 35px;
   }
-  
+  #btn {
+    animation: animacao-bottom 1.5s ease-in-out;
+  }
 
 }
 

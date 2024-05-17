@@ -153,7 +153,7 @@
    display: none;
    font-size: 0.9rem;
    transition: opacity 0.2s ease;
-   animation: animacao-left 0.5s ease-in-out;
+   
   }
   .centro-esconder {
     display: none;
@@ -161,14 +161,14 @@
     font-size: 0.8rem;
     opacity: 0;
     transition: opacity 0.2s ease-in-out;
-    animation: animacao-top 0.5s ease-in-out;
+   
   }
   .saiba-esconder {
     opacity: 0;
     display: none;
     font-size: 0.8rem;
     transition: opacity 0.2s ease-in-out;
-    animation: animacao-right 0.5s ease-in-out;
+  
   }
 
 </style>

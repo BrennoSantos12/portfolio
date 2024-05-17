@@ -24,12 +24,7 @@
           50% {opacity: 0; }
           100% {opacity: 1;}
           }
-          @keyframes button {
-            0% {transform: scale(1);}
-            30% {transform: scale(0.7);}
-            60% {transform: scale(1.3);}
-            100% {transform: scale(1);}
-           }
+          
  </style>
 
  <script>
