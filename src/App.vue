@@ -22,8 +22,7 @@
     </section>
     <section id="Contatos">
 
-
-
+      <ContatosVue/>
 
     </section>
     
@@ -37,7 +36,7 @@
  import SobreVue from './components/Sobre.vue';
  import AnimationText from './components/AnimationText.vue';
  import ProjetoSection from './components/Projetos.vue';
- 
+ import ContatosVue from './components/Contatos.vue';
 
 export default {
   name: 'App',
@@ -47,6 +46,7 @@ export default {
     ProjetoSection,
     HomeVue,
     SobreVue,
+    ContatosVue,
   }
 }
 </script>
@@ -67,16 +67,13 @@ body {
 ::-webkit-scrollbar {
   width: 0px;
 }
-
-
-
-
-
-
-#Contatos {
-  min-height: 40vw;
-  background-color: rgb(31, 31, 31);
+* {
+  margin: 0;
+  padding: 0;
 }
+
+
+
 
   @media screen and (max-width: 600px) {
     body {

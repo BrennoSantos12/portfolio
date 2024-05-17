@@ -1,10 +1,13 @@
 <template>
     <div class="sobre-container">
+      <h1 class="titulo-sobr">SOBRE MIM</h1>
         <h1 class="sobre-titulo" v-motion-slide-visible-left :delay="300">
          Estudo Análise e Desenvolvimento de Sistemas na FATEC- SENAI e estou
-          trilhando meu caminho para me tornar um programador Full-Stack. Busco aventuras e desafios 
-          no mundo do Front-End para mostrar minhas habilidades de design e código e explorar todo meu 
-          potencial. Confira meu portfólio e vamos criar juntos!</h1>
+          trilhando meu caminho para me tornar um programador com skills em <span>Front-End</span> e <span>Back-end</span>.
+           Busco aventuras e desafios 
+          no mundo do <span>Front-End</span> para mostrar minhas habilidades de design e código e explorar todo meu 
+          potencial. <br> Possuo habilidades em: <span>HTML5, CSS3, javascript, Python, Node.js e Vue.js.</span>
+          Confira meu portfólio e vamos trabalhar juntos!</h1>
    
           <button class="button">Saiba mais sobre mim</button>
         </div>
@@ -31,6 +34,9 @@
   font-size: 1rem;
   width: 40%;
   overflow-wrap: break-word;
+}
+span {
+  color: yellow;
 }
 .button {
   --color: #6300a9;
@@ -75,7 +81,6 @@
  .button:hover {
   color: rgb(74, 2, 74);
   filter: brightness(0.9);
-  animation: button 0.9s ease-in-out;
  }
 
  @media screen and (max-width: 600px) {
