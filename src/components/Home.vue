@@ -1,7 +1,7 @@
 <template>
     <div class="titulo-container">
         <h1 class="titulo" >Brenno Santos</h1>
-        <div class="menu"></div>
+        
       </div>
       <div class="sub-titulo-container">
         <h2 class="sub-titulo" >Front-End Developer</h2>
@@ -10,66 +10,101 @@
           <div class="link2"><a href="https://www.linkedin.com/in/brenno-santos-692752290/"><img src="@\assets\LinkedIn.png" alt="LinkedIn" style="height: 4rem; width: 4rem;"></a></div>
         </div>
       </div>
-      
+      <div class="marquee">
+  <h1>‎ HTML5 - CSS3 - JAVASCRIPT - PYTHON - NODE.JS - VUE.JS -</h1>
+</div>
 
 
 </template>
+<script>
 
+export default {
+   name: 'HomeVue',
+   mounted() {
+    function Marquee(selector, speed) {
+  const parentSelector = document.querySelector(selector);
+  const clone = parentSelector.innerHTML;
+  const firstElement = parentSelector.children[0];
+  let i = 0;
+  console.log(firstElement);
+  parentSelector.insertAdjacentHTML('beforeend', clone);
+  parentSelector.insertAdjacentHTML('beforeend', clone);
+
+  setInterval(function () {
+    firstElement.style.marginLeft = `-${i}px`;
+    if (i > firstElement.clientWidth) {
+      i = 0;
+    }
+    i = i + speed;
+  }, 0);
+}
+
+window.addEventListener('load', Marquee('.marquee', 0.5))
+
+   }
+ }
+</script>
 <style>
+.marquee {
+  overflow: hidden;
+  display: flex;
+  margin-top: 12rem;
+  animation: animacao-top 1.3s ease-in-out;
+}
 
+.marquee h1{
+  font-size: 5em;
+  white-space: nowrap;
+  text-transform: uppercase;
+  word-spacing: 20px; 
+}
 #Home {
+    
     height: 100vh;
-    margin: 1rem;
+    background: linear-gradient(to right, rgb(67, 19, 103), rgb(122, 42, 183));
     color: aliceblue;
-   
-  }
-  #Home .titulo-container { 
-   display: flex;
-   justify-content: space-between;
-   margin-top: 4rem;
   
   }
-  #Home .titulo {
+   .titulo-container { 
+  display: flex;
+  
+  }
+   .titulo {
     font-size: 5rem;
     animation: animacao-left 1s ease-in-out;
-  
+   margin: 2rem;
   }
-  #Home .sub-titulo-container {
+   .sub-titulo-container {
     display: flex;
     justify-content: space-between;
-    margin-left: 3rem;
     gap: 2rem;
   }
-  #Home .sub-titulo {
-    margin-top: 4rem;
+   .sub-titulo {
+    margin: 2rem;
     animation: animacao-top 1.2s ease-in-out;
   }
-  #Home .link-container {
+   .link-container {
   display: flex;
   flex-direction: column;
-  gap: 3rem;
-  margin: 1rem;
+  margin-top: 40px;
+  margin: 2rem;
+  gap: 40px;
   }
   
-  #Home .link1 {
+   .link1 {
+    margin-top: 1rem;
     animation: animacao-bottom 1.2s ease-in-out;
     transition: transform 0.2s ease-in-out;
   }
-  #Home .link1:hover {
+   .link1:hover, .link2:hover {
     transform: scale(0.8);
   }
-  #Home .link2 {
+   .link2 {
     animation: animacao-top 1.2s ease-in-out;
     transition: transform 0.2s ease-in-out;
-  }
-  #Home .link2:hover {
-    transform: scale(0.8);
-  }
+   }
   
   @media screen and (max-width: 600px) {
-    #Home {
-        height: 100vh;
-      }
       #Home .titulo {
         font-size: 4rem;
       }
@@ -77,25 +112,26 @@
       #Home .sub-titulo-container {
         display: flex;
         flex-direction: column;
-        margin-left: 0;
+        
+      }
+      
+      .marquee h1 {
+      font-size: 2em;
       }
       #Home .link-container {
         display: flex;
         flex-direction: initial;
+        margin: 2rem;
+        
       }
       #Home .link2 {
         animation: animacao-right 1.2s ease-in-out;
       }
       #Home .link1 {
+        margin-top: 0rem;
         animation: animacao-left 1.2s ease-in-out;
       }
   }
 
 </style>
 
-<script>
-
-export default {
-   name: 'HomeVue',
- }
-</script>

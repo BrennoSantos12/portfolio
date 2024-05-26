@@ -24,7 +24,19 @@
           50% {opacity: 0; }
           100% {opacity: 1;}
           }
-          
+          @keyframes longo-direita {
+    0% {opacity: 0;
+        transform: translateX(-400px);}
+        50% {opacity: 0.5; }
+        100% {opacity: 1;}
+}
+@keyframes longo-esquerda {
+    0% {opacity: 1;
+        transform: translateX(0px);}
+        50% {opacity: 0.5; }
+        100% {opacity: 0;
+ transform:  translateX(-350px);}
+}
  </style>
 
  <script>

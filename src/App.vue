@@ -38,6 +38,7 @@
  import ProjetoSection from './components/Projetos.vue';
  import ContatosVue from './components/Contatos.vue';
 
+
 export default {
   name: 'App',
   components: {
@@ -53,17 +54,16 @@ export default {
 <style>
 
 html {
+  font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
   scroll-behavior: smooth;
   overflow-x: hidden;
 }
 body {
-  background: linear-gradient(to right, rgb(67, 19, 103), rgb(122, 42, 183));
-  padding: 0;
-  margin: 0;
-  font-family: "Bebas Neue", sans-serif;
-  font-weight: 400;
-  font-style: normal;
+  background-color: rgb(29, 29, 29);
 }
+ 
 ::-webkit-scrollbar {
   width: 0px;
 }
@@ -71,14 +71,5 @@ body {
   margin: 0;
   padding: 0;
 }
-
-
-
-
-  @media screen and (max-width: 600px) {
-    body {
-      overflow-x: hidden;
-    }
-  }
 
 </style>

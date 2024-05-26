@@ -1,15 +1,15 @@
 <template>
-    <div class="sobre-container">
-      <h1 class="titulo-sobr">SOBRE MIM</h1>
-        <h1 class="sobre-titulo" v-motion-slide-visible-left :delay="300">
+    <div class="sobre-container" v-motion-slide-visible-left :delay="400">
+      <h1>SOBRE MIM</h1>
+        <h1 class="sobre-titulo" >
          Estudo Análise e Desenvolvimento de Sistemas na FATEC- SENAI e estou
-          trilhando meu caminho para me tornar um programador com skills em <span>Front-End</span> e <span>Back-end</span>.
+          trilhando meu caminho para me tornar um programador com skills em <span class="span">Front-End</span> e <span class="span">Back-end</span>.
            Busco aventuras e desafios 
-          no mundo do <span>Front-End</span> para mostrar minhas habilidades de design e código e explorar todo meu 
-          potencial. <br> Possuo habilidades em: <span>HTML5, CSS3, javascript, Python, Node.js e Vue.js.</span>
+          no mundo do <span class="span">Front-End</span> para mostrar minhas habilidades de design e código e explorar todo meu 
+          potencial. <br> Possuo habilidades em: <span class="span">HTML5, CSS3, javascript, Python, Node.js e Vue.js.</span>
           Confira meu portfólio e vamos trabalhar juntos!</h1>
    
-          <button class="button">Saiba mais sobre mim</button>
+          <a class="button" href="../files/CV- Brenno Santos.pdf">Baixe o meu Currículo</a>
         </div>
 
 </template>
@@ -34,11 +34,13 @@
   font-size: 1rem;
   width: 40%;
   overflow-wrap: break-word;
+  color: aliceblue;
 }
-span {
+.span {
   color: yellow;
 }
 .button {
+  text-decoration: none;
   --color: #6300a9;
   padding: 1em 1.6em;
   background-color: transparent;
@@ -56,6 +58,7 @@ span {
  }
  
   .button::after {
+
   content: '';
   display: block;
   width: 50px;
@@ -83,22 +86,23 @@ span {
   filter: brightness(0.9);
  }
 
- @media screen and (max-width: 600px) {
+ @media screen and (max-width: 900px) {
        
   #Sobre {
-    min-height: 100vw;
+    height: 70vh;
   }
   #Sobre .sobre-titulo {
     font-size: 0.8rem;
     width: 80%;
     overflow-wrap: break-word;
   }
-  
  }
+
 </style>
 
 <script>
 export default {
     name: 'SobreVue',
+
 }
 </script>

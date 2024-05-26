@@ -11,10 +11,7 @@
   </div>
  
   <span style="font-size:40px; cursor:pointer" id="btn" @click="openNav()">&#9776;</span>
-  <div class="link" >
-    
-   
-    </div>
+
   </div>
 </template>
 
@@ -98,6 +95,7 @@ export default {
   right: 35px;
   }
   #btn {
+    margin: 2rem;
     animation: animacao-bottom 1.5s ease-in-out;
   }
 
