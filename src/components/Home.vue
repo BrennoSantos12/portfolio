@@ -6,8 +6,8 @@
       <div class="sub-titulo-container">
         <h2 class="sub-titulo" >Front-End Developer</h2>
         <div class="link-container">
-          <div class="link1"> <a href="https://github.com/BrennoSantos12"><img src="@\assets\github.png" alt="GitHub" style="height: 4.5rem; width: 4.5rem;"></a></div>
-          <div class="link2"><a href="https://www.linkedin.com/in/brenno-santos-692752290/"><img src="@\assets\LinkedIn.png" alt="LinkedIn" style="height: 4rem; width: 4rem;"></a></div>
+          <div class="link1"> <a href="https://github.com/BrennoSantos12"><img src="@/assets/github.png" alt="GitHub" style="height: 4.5rem; width: 4.5rem;"></a></div>
+          <div class="link2"><a href="https://www.linkedin.com/in/brenno-santos-692752290/"><img src="@/assets/LinkedIn.png" alt="LinkedIn" style="height: 4rem; width: 4rem;"></a></div>
         </div>
       </div>
       <div class="marquee">
