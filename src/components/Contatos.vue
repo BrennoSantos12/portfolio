@@ -2,8 +2,8 @@
 <div class="ctt-container">
 <h1 class="ctt-titulo" id="ctttiulo">Vamos trabalhar juntos!</h1>
 <div class="link-container-ctt">
-          <div class="link1-ctt"> <a href="https://github.com/BrennoSantos12"><img src="@\assets\github branco.png" alt="GitHub" style="height: 4.5rem; width: 4.5rem;"></a></div>
-          <div class="link2-ctt"><a href="https://www.linkedin.com/in/brenno-santos-692752290/"><img src="@\assets\linkedin branco.png" alt="LinkedIn" style="height: 4rem; width: 4rem;"></a></div>
+          <div class="link1-ctt"> <a href="https://github.com/BrennoSantos12"><img src="@/assets/github branco.png" alt="GitHub" style="height: 4.5rem; width: 4.5rem;"></a></div>
+          <div class="link2-ctt"><a href="https://www.linkedin.com/in/brenno-santos-692752290/"><img src="@/assets/linkedin branco.png" alt="LinkedIn" style="height: 4rem; width: 4rem;"></a></div>
         </div>
 </div>
 
