@@ -1,4 +1,5 @@
 <template>
+
     <div class="titulo-container">
         <h1 class="titulo" >Brenno Santos</h1>
         
@@ -13,7 +14,6 @@
       <div class="marquee">
   <h1>‎ HTML5 - CSS3 - JAVASCRIPT - PYTHON - NODE.JS - VUE.JS -</h1>
 </div>
-
 
 </template>
 <script>
@@ -48,18 +48,18 @@ window.addEventListener('load', Marquee('.marquee', 0.5))
 .marquee {
   overflow: hidden;
   display: flex;
- align-items: center;
   animation: animacao-top 1.3s ease-in-out;
 }
 
 .marquee h1{
+  margin-top: 5rem;
   font-size: 5em;
   white-space: nowrap;
   text-transform: uppercase;
   word-spacing: 20px; 
 }
+
 #Home {
-    
     height: 100vh;
     background: linear-gradient(to right, rgb(67, 19, 103), rgb(122, 42, 183));
     color: aliceblue;
@@ -103,8 +103,7 @@ window.addEventListener('load', Marquee('.marquee', 0.5))
     animation: animacao-top 1.2s ease-in-out;
     transition: transform 0.2s ease-in-out;
    }
-  
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 700px) {
       #Home .titulo {
         font-size: 4rem;
       }
@@ -114,9 +113,10 @@ window.addEventListener('load', Marquee('.marquee', 0.5))
         flex-direction: column;
         
       }
-      
+    
       .marquee h1 {
-      font-size: 2em;
+        margin-top: 5rem;
+      font-size: 3em;
       }
       #Home .link-container {
         display: flex;
