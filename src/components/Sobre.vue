@@ -1,5 +1,5 @@
 <template>
-    <div class="sobre-container" v-motion-slide-visible-left :delay="400">
+    <div class="sobre-container" id="vivo2">
       <h1>SOBRE MIM</h1>
         <h1 class="sobre-titulo" >
          Estudo Análise e Desenvolvimento de Sistemas na FATEC- SENAI e estou
@@ -17,6 +17,8 @@
 <style>
 
 #Sobre{
+  z-index: 1;
+  position: relative;
     color: white;
     background-color: rgb(26, 23, 28);
     height: 40vw;
@@ -103,6 +105,28 @@
 <script>
 export default {
     name: 'SobreVue',
+   mounted() {
+    
+    const vivo2 = document.getElementById("vivo2");
+    
+   
+    const translateN = 500;
+    window.onscroll = () => {
+      const PosicaoScroll = window.scrollY;
+   const AlturaDaPagina = window.innerHeight;
+   const PontoDeInicio = 0;
+   const PontoFinal = AlturaDaPagina / 2;
 
-}
+   if (PosicaoScroll + AlturaDaPagina / 2 >= PontoDeInicio) {
+       const translateY = Math.min(translateN, Math.max(0, (PosicaoScroll - PontoDeInicio) * (translateN / (PontoFinal - PontoDeInicio))));
+       vivo2.style.transform = `translate(0px, ${translateY}px);`;
+   }
+  }
+    }
+  }
+
+
+
+
+    
 </script>

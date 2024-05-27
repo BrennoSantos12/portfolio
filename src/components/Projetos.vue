@@ -19,7 +19,7 @@
     </div>
 
 
-    <div class="projeto" id="projeto2" v-motion-slide-visible-left :delay="400">
+    <div class="projeto" id="projeto2" v-motion-slide-visible-left :delay="100">
         <div class="projeto-esquerda">
         <h1 class="titulo1">Oliveira e <br> Mascarenhas</h1>
         <p class="texto-esconder">Advogados associados</p>
@@ -37,7 +37,7 @@
     </div>
 
 
-    <div class="projeto" id="projeto3" v-motion-slide-visible-left :delay="700">
+    <div class="projeto" id="projeto3" v-motion-slide-visible-left :delay="100">
         <div class="projeto-esquerda">
         <h1 class="titulo1">EM BREVE</h1>
         <p class="texto-esconder">EM BREVE</p>
@@ -62,6 +62,8 @@
 <style>
 
 #Projetos {
+  z-index: 1;
+  position: relative;
   min-height: 100%;
 }
 .projeto {
