@@ -31,14 +31,14 @@
 
 #Contatos {
     background-color: #1a171c;
-    height: 80vh;
+    height: 100vh;
 }
 .creditos {
     color: aliceblue;
     font-size: 10px;   
     display: flex;
     justify-content: flex-end;
-    margin: 4rem;
+    margin: 3rem;
 }
 .ctt-titulo {
     display: flex;
