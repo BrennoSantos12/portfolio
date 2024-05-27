@@ -48,7 +48,7 @@ window.addEventListener('load', Marquee('.marquee', 0.5))
 .marquee {
   overflow: hidden;
   display: flex;
-  margin-top: 12rem;
+ align-items: center;
   animation: animacao-top 1.3s ease-in-out;
 }
 
