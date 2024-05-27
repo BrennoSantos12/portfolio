@@ -7,13 +7,13 @@
     </div>
     <div class="centro-esconder">
         <p>clique na imagem para ir até o site</p>
-        <a href=""><img src="@\assets\portfolioimg.png" style="border-radius: 10px;" alt="Portfólio" class="img" id="img"></a>
+        <a href=""><img src="@/assets/portfolioimg.png" style="border-radius: 10px;" alt="Portfólio" class="img" id="img"></a>
     </div>
         <div class="saiba-direita">
          <h3 class="saiba">clique para saber mais</h3>
          <div class="saiba-esconder">
             <h1>Linguagens utilizadas</h1>
-          <img src="@\assets\vue_icon.png" alt="Vue.js" class="linguagem">
+          <img src="@/assets/vue_icon.png" alt="Vue.js" class="linguagem">
         </div>
         </div>
     </div>
@@ -25,7 +25,7 @@
         <p class="texto-esconder">Advogados associados</p>
     </div>
     <div class="centro-esconder">
-        <a ><img src="@\assets\embreve.jpg" style="border-radius: 10px;" alt="em breve" class="img" id="img" ></a>
+        <a ><img src="@/assets/embreve.jpg" style="border-radius: 10px;" alt="em breve" class="img" id="img" ></a>
     </div>
         <div class="saiba-direita">
          <h3 class="saiba">clique para saber mais</h3>
