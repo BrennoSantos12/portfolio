@@ -37,7 +37,7 @@
     color: aliceblue;
     font-size: 10px;   
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
     margin: 4rem;
 }
 .ctt-titulo {
