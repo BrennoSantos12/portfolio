@@ -1,9 +1,9 @@
 <template>
 <AnimationText/>
-
+<TopMenu/>
   <section id="Home">
     
-    <HomeVue/><TopMenu/>
+    <HomeVue/>
 
   </section>
 
@@ -61,6 +61,8 @@ html {
   overflow-x: hidden;
 }
 body {
+  z-index: 1;
+  position: relative;
   background-color: rgb(29, 29, 29);
 }
  

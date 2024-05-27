@@ -1,7 +1,7 @@
 <template>
-
-    <div class="titulo-container">
-        <h1 class="titulo" >Brenno Santos</h1>
+<div class="home-container" id="vivo">
+    <div class="titulo-container" >
+        <h1 class="titulo">Brenno Santos</h1>
         
       </div>
       <div class="sub-titulo-container">
@@ -14,7 +14,7 @@
       <div class="marquee">
   <h1>‎ HTML5 - CSS3 - JAVASCRIPT - PYTHON - NODE.JS - VUE.JS -</h1>
 </div>
-
+</div>
 </template>
 <script>
 
@@ -41,10 +41,32 @@ export default {
 
 window.addEventListener('load', Marquee('.marquee', 0.5))
 
+
+
+window.addEventListener('scroll', function() {
+            const items = document.getElementById('vivo');
+            const scrollY = window.scrollY;
+
+  
+                const translateY = scrollY * 1.5;
+                items.style.transform = `translateY(${translateY}px)`;
+                if (scrollY >= 500) {
+                  items.style.display = 'none';
+    
+                } else {
+                  items.style.display = 'block';
+                 
+                }
+            });
+
    }
- }
+}
 </script>
 <style>
+
+.home-container {
+ z-index: 0;
+}
 .marquee {
   overflow: hidden;
   display: flex;
@@ -60,6 +82,7 @@ window.addEventListener('load', Marquee('.marquee', 0.5))
 }
 
 #Home {
+   
     height: 100vh;
     background: linear-gradient(to right, rgb(67, 19, 103), rgb(122, 42, 183));
     color: aliceblue;
@@ -84,6 +107,7 @@ window.addEventListener('load', Marquee('.marquee', 0.5))
     animation: animacao-top 1.2s ease-in-out;
   }
    .link-container {
+    
   display: flex;
   flex-direction: column;
   margin-top: 40px;

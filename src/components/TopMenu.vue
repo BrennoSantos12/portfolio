@@ -13,6 +13,7 @@
   <span style="font-size:40px; cursor:pointer" id="btn" @click="openNav()">&#9776;</span>
 
   </div>
+  
 </template>
 
 
@@ -41,7 +42,7 @@ export default {
   color: aliceblue;
   position: fixed;
   margin: 3rem;
-  z-index: 1;
+  z-index: 10;
   top: 0;
   right: 0;
   animation: animacao-right 1.5s ease-in-out;
@@ -51,7 +52,7 @@ export default {
   height: 100%;
   width: 0;
   position: fixed;
-  z-index: 1;
+  z-index: 10;
   top: 0;
   right: 0;
   background-color: black;
