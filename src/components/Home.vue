@@ -76,7 +76,7 @@ window.addEventListener('scroll', () => {
 }
 
 .marquee h1{
-  margin-top: 3rem;
+  
   font-size: 5em;
   white-space: nowrap;
   text-transform: uppercase;
