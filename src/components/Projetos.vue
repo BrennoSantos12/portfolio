@@ -1,6 +1,6 @@
 <template>
 
-    <div class="projeto" id="projeto1" v-motion-slide-visible-left :delay="100">
+    <div class="projeto" id="projeto1" v-motion-slide-visible-left :delay="200">
         <div class="projeto-esquerda">
         <h1 class="titulo1">Portfólio</h1>
         <p class="texto-esconder">Meu portfólio foi meu primeiro desafio, no qual <br>busquei encontrar um equilíbrio usando um design <br> minimalista e responsivo.</p>
@@ -19,7 +19,7 @@
     </div>
 
 
-    <div class="projeto" id="projeto2" v-motion-slide-visible-left :delay="100">
+    <div class="projeto" id="projeto2" v-motion-slide-visible-left :delay="300">
         <div class="projeto-esquerda">
         <h1 class="titulo1">Oliveira e <br> Mascarenhas</h1>
         <p class="texto-esconder">Advogados associados</p>
@@ -37,7 +37,7 @@
     </div>
 
 
-    <div class="projeto" id="projeto3" v-motion-slide-visible-left :delay="100">
+    <div class="projeto" id="projeto3" v-motion-slide-visible-left :delay="400">
         <div class="projeto-esquerda">
         <h1 class="titulo1">EM BREVE</h1>
         <p class="texto-esconder">EM BREVE</p>
@@ -64,6 +64,7 @@
 #Projetos {
   z-index: 1;
   position: relative;
+  background-color: rgb(29, 29, 29);;
   min-height: 100%;
 }
 .projeto {

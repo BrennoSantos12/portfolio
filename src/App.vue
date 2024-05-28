@@ -59,10 +59,9 @@ html {
     font-style: normal;
   scroll-behavior: smooth;
   overflow-x: hidden;
+  
 }
 body {
-  z-index: 1;
-  position: relative;
   background-color: rgb(29, 29, 29);
 }
  

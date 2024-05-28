@@ -1,15 +1,14 @@
 <template>
-<div class="home-container" id="vivo">
+<div class="home-container" id="home-container">
     <div class="titulo-container" >
         <h1 class="titulo">Brenno Santos</h1>
-        
+        <h2 class="sub-titulo">Front-End Developer</h2> 
       </div>
-      <div class="sub-titulo-container">
-        <h2 class="sub-titulo" >Front-End Developer</h2>
+      
         <div class="link-container">
           <div class="link1"> <a href="https://github.com/BrennoSantos12"><img src="@/assets/github.png" alt="GitHub" style="height: 4.5rem; width: 4.5rem;"></a></div>
           <div class="link2"><a href="https://www.linkedin.com/in/brenno-santos-692752290/"><img src="@/assets/LinkedIn.png" alt="LinkedIn" style="height: 4rem; width: 4rem;"></a></div>
-        </div>
+
       </div>
       <div class="marquee">
   <h1>‎ HTML5 - CSS3 - JAVASCRIPT - PYTHON - NODE.JS - VUE.JS -</h1>
@@ -42,30 +41,33 @@ export default {
 window.addEventListener('load', Marquee('.marquee', 0.5))
 
 
+const container = document.getElementById('home-container');
+const translateN = 500;
 
-window.addEventListener('scroll', function() {
-            const items = document.getElementById('vivo');
-            const scrollY = window.scrollY;
+window.addEventListener('scroll', () => {
+   const PosicaoScroll = window.scrollY;
+   const AlturaDaPagina = window.innerHeight;
+   const AlturaDoDocumento = document.documentElement.scrollHeight;
 
-  
-                const translateY = scrollY * 1.5;
-                items.style.transform = `translateY(${translateY}px)`;
-                if (scrollY >= 500) {
-                  items.style.display = 'none';
-    
-                } else {
-                  items.style.display = 'block';
-                 
-                }
-            });
+   const PontoDeInicio = 0;
+   const PontoFinal = AlturaDoDocumento - AlturaDaPagina;
+
+   const translateY = Math.min(translateN, Math.max(0, (PosicaoScroll - PontoDeInicio) * (translateN / (PontoFinal - PontoDeInicio))));
+   container.style.transform = `translate(0px, ${translateY}px)`;
+});
+
+}
+
 
    }
-}
+
 </script>
 <style>
 
 .home-container {
+  width: 100%;
  z-index: 0;
+ position: fixed;
 }
 .marquee {
   overflow: hidden;
@@ -82,41 +84,35 @@ window.addEventListener('scroll', function() {
 }
 
 #Home {
-   
-    height: 100vh;
+      height: 100vh;
     background: linear-gradient(to right, rgb(67, 19, 103), rgb(122, 42, 183));
     color: aliceblue;
   
   }
    .titulo-container { 
   display: flex;
-  
+  flex-direction: column;
   }
    .titulo {
     font-size: 5rem;
     animation: animacao-left 1s ease-in-out;
    margin: 2rem;
   }
-   .sub-titulo-container {
-    display: flex;
-    justify-content: space-between;
-    gap: 2rem;
-  }
+  
    .sub-titulo {
     margin: 2rem;
     animation: animacao-top 1.2s ease-in-out;
   }
    .link-container {
-    
-  display: flex;
-  flex-direction: column;
-  margin-top: 40px;
-  margin: 2rem;
-  gap: 40px;
+   display: flex;
+   align-items: flex-end;
+   justify-content: baseline;
+   flex-direction: column;
+   gap: 40px;
+   margin: 2rem;
   }
   
    .link1 {
-    margin-top: 1rem;
     animation: animacao-bottom 1.2s ease-in-out;
     transition: transform 0.2s ease-in-out;
   }
