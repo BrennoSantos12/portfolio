@@ -33,7 +33,7 @@
     z-index: 1;
     position: relative;
     background-color: #1a171c;
-    height: 100vh;
+    height: 90vh;
 }
 .creditos {
     color: aliceblue;

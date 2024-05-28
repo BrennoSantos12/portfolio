@@ -1,6 +1,6 @@
 <template>
-    <div class="sobre-container" id="vivo2">
-      <h1>SOBRE MIM</h1>
+    <div class="sobre-container">
+      <h1 class="sobre-mim">SOBRE MIM</h1>
         <h1 class="sobre-titulo" >
          Estudo Análise e Desenvolvimento de Sistemas na FATEC- SENAI e estou
           trilhando meu caminho para me tornar um programador com skills em <span class="span">Front-End</span> e <span class="span">Back-end</span>.
@@ -21,9 +21,12 @@
   position: relative;
     color: white;
     background-color: rgb(26, 23, 28);
-    height: 40vw;
+    height: 60vw;
     display: flex;
     align-items: center;
+  }
+  .sobre-mim {
+    font-size: 2rem;
   }
 #Sobre .sobre-container {
    display: flex;
@@ -33,7 +36,7 @@
    gap: 2rem;
 }
 #Sobre .sobre-titulo {
-  font-size: 1rem;
+  font-size: 1.2rem;
   width: 40%;
   overflow-wrap: break-word;
   color: aliceblue;
@@ -44,7 +47,7 @@
 .button {
   text-decoration: none;
   --color: #6300a9;
-  padding: 1em 1.6em;
+  padding: 1.3em 6em;
   background-color: transparent;
   border-radius: 0.3em;
   position: relative;
@@ -63,8 +66,8 @@
 
   content: '';
   display: block;
-  width: 50px;
-  height: 50px;
+  width: 100px;
+  height: 100px;
   transform: translate(-50%, -50%);
   position: absolute;
   border-radius: 50%;
@@ -74,13 +77,13 @@
  }
 
  .button::after {
-  left: calc(40% + 1em);
+  left: calc(50% + 1em);
   top: calc(200% + 1em);
  }
  
  .button:hover::before, .button:hover::after {
-  height: 410px;
-  width: 410px;
+  height: 510px;
+  width: 610px;
  }
  
  .button:hover {
@@ -91,12 +94,16 @@
  @media screen and (max-width: 900px) {
        
   #Sobre {
-    height: 70vh;
+    height: 95vh;
   }
   #Sobre .sobre-titulo {
     font-size: 0.8rem;
     width: 80%;
     overflow-wrap: break-word;
+  }
+  .button { 
+
+    padding: 1em 2em;
   }
  }
 
@@ -107,21 +114,7 @@ export default {
     name: 'SobreVue',
    mounted() {
     
-    const vivo2 = document.getElementById("vivo2");
-    
-   
-    const translateN = 500;
-    window.onscroll = () => {
-      const PosicaoScroll = window.scrollY;
-   const AlturaDaPagina = window.innerHeight;
-   const PontoDeInicio = 0;
-   const PontoFinal = AlturaDaPagina / 2;
 
-   if (PosicaoScroll + AlturaDaPagina / 2 >= PontoDeInicio) {
-       const translateY = Math.min(translateN, Math.max(0, (PosicaoScroll - PontoDeInicio) * (translateN / (PontoFinal - PontoDeInicio))));
-       vivo2.style.transform = `translate(0px, ${translateY}px);`;
-   }
-  }
     }
   }
 
