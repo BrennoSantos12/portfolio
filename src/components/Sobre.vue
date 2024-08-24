@@ -19,8 +19,8 @@
 #Sobre{
   z-index: 1;
   position: relative;
-    color: white;
-    background-color: rgb(26, 23, 28);
+    color: var(--letra-cor);
+    background-color: var(--secundary-color);
     height: 60vw;
     display: flex;
     align-items: center;
@@ -39,7 +39,7 @@
   font-size: 1.2rem;
   width: 40%;
   overflow-wrap: break-word;
-  color: aliceblue;
+  color: var(--letra-cor);
 }
 .span {
   color: yellow;
