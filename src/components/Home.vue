@@ -3,6 +3,9 @@
     <div class="titulo-container" >
         <h1 class="titulo">Brenno Santos</h1>
         <h2 class="sub-titulo">Front-End Developer</h2> 
+        <div class="bloco">
+          <div @click="alterarCor(0,0); alterarCor(1,1); alterarCor(2,2); alterarCor(3,0)" class="corRosa"></div>
+        </div>
       </div>
       
         <div class="link-container">
@@ -46,7 +49,7 @@ const translateN = 500;
 
 window.addEventListener('scroll', () => {
    const PosicaoScroll = window.scrollY;
-   const AlturaDaPagina = window.innerHeight;
+   const AlturaDaPagina = window.innerHeight / 10;
    const AlturaDoDocumento = document.documentElement.scrollHeight;
 
    const PontoDeInicio = 0;
@@ -54,15 +57,52 @@ window.addEventListener('scroll', () => {
 
    const translateY = Math.min(translateN, Math.max(0, (PosicaoScroll - PontoDeInicio) * (translateN / (PontoFinal - PontoDeInicio))));
    container.style.transform = `translate(0px, ${translateY}px)`;
-});
+
+
+})
+
+
+},
+
+data() {
+    return {
+      
+      variaveis: ['--primary-color', '--letra-cor', '--secundary-color', '--projeto-color'],
+    
+      cores: ['#F11A7B', '#FFE5AD', '#3E001F']
+    }
+  },
+
+methods: {
+
+   alterarCor(variavelIndex, corIndex) {
+
+const variavel = this.variaveis[variavelIndex];
+
+const cor = this.cores[corIndex];
+
+document.documentElement.style.setProperty(variavel, cor);
+}
+}
+
+
 
 }
 
 
-   }
+
 
 </script>
 <style>
+
+.corRosa {
+  background-color: #F11A7B;
+  border: 2px solid aliceblue;
+  border-radius: 50%;
+  height: 2rem;
+  width: 2rem;
+  transform: translate(80px)
+}
 
 .home-container {
   width: 100%;
@@ -85,8 +125,8 @@ window.addEventListener('scroll', () => {
 
 #Home {
       height: 100vh;
-    background: linear-gradient(to right, rgb(67, 19, 103), rgb(122, 42, 183));
-    color: aliceblue;
+    background: var(--primary-color);
+    color: var(--letra-cor);
   
   }
    .titulo-container { 

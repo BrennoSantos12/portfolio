@@ -52,7 +52,12 @@ export default {
 }
 </script>
 <style>
-
+:root {
+  --primary-color: linear-gradient(to right, rgb(67, 19, 103), rgb(122, 42, 183));
+  --projeto-color:rgba(72,8,82,1);
+  --letra-cor: aliceblue;
+  --secundary-color: rgb(26, 23, 28);
+}
 html {
   font-family: "Bebas Neue", sans-serif;
     font-weight: 400;

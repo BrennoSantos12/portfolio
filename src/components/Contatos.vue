@@ -32,11 +32,11 @@
 #Contatos {
     z-index: 1;
     position: relative;
-    background-color: #1a171c;
+    background-color: var(--secundary-color);
     height: 90vh;
 }
 .creditos {
-    color: aliceblue;
+    color: var(--letra-cor);
     font-size: 10px;   
     display: flex;
     justify-content: flex-end;
@@ -44,7 +44,7 @@
 }
 .ctt-titulo {
     display: flex;
-    color: aliceblue;
+    color: var(--letra-cor);
     font-size: 4rem;
     margin-top: 6rem;
     transform: translate(0px);
@@ -89,14 +89,14 @@
    
 }
 .btn-animation:hover {
-    background-color: rebeccapurple;
+    background-color: var(--primary-color);
 }
 .clicado1 {
     height: 5rem;
     width: 25rem;
     cursor: pointer;
     border-style: none;
-    background-color: aliceblue;
+    background-color: var(--letra-cor);
     border-radius: 10px;
     color: rgb(0, 0, 0);
     transform: translate(0px, 0px);

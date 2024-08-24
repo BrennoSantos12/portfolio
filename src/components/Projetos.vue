@@ -64,12 +64,13 @@
 #Projetos {
   z-index: 1;
   position: relative;
-  background-color: rgb(29, 29, 29);;
+  background-color: rgb(29, 29, 29);
+  
   min-height: 100%;
 }
 .projeto {
-    color: rgba(240, 248, 255, 0.849);
-    background-color: rgb(49, 14, 76);
+    color: var(--letra-cor);
+    background-color: var(--projeto-color);
     width: 100%;
     height: 10rem;
     display: flex;
