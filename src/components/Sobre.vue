@@ -21,7 +21,7 @@
 #Sobre {
   z-index: 1;
   position: relative;
-  color: var(--letra-color);
+  color: var(--secundary-letter-color);
   background-color: var(--secundary-color);
   height: 60vw;
   display: flex;
@@ -44,7 +44,7 @@
   font-size: 1.2rem;
   width: 40%;
   overflow-wrap: break-word;
-  color: var(--letra-color);
+  color: var(--secundary-letter-color);
 }
 
 .span {
@@ -94,7 +94,7 @@
 }
 
 .button:hover {
-  color: rgb(74, 2, 74);
+  color: var(--secundary-color);
   filter: brightness(0.9);
 }
 
