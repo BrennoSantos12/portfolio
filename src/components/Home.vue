@@ -3,16 +3,7 @@
     <div class="titulo-container">
       <h1 class="titulo">Brenno Santos</h1>
       <h2 class="sub-titulo">Front-End Developer</h2>
-      <div class="bloco">
-        <div class="corOriginal" @click="voltar()"></div>
-        <div @click="alterarCor(0, 0); alterarCor(1, 1);
-        alterarCor(2, 2); alterarCor(3, 0);
-        alterarCor(4, 3); alterarCor(5, 1);
-        alterarCor(6, 1); alterarCor(7, 5);
-        alterarCor(8, 5); alterarCor(9, 5);
-        alterarCor(10, 5); alterarCor(11, 5);
-        alterarCor(12, 2)" class="corRosa"></div>
-      </div>
+     
     </div>
 
     <div class="link-container">
@@ -73,50 +64,7 @@ export default {
 
   },
 
-  data() {
-    return {
-
-      variaveis: [
-     /* 0 */      '--primary-color',
-     /* 1 */      '--letra-color',
-     /* 2 */      '--secundary-color',
-     /* 3 */      '--projeto-color',
-     /* 4 */      '--projeto-hover-color',
-     /* 5 */      '--button-sobre-color',
-     /* 6 */      '--button-contato-color',
-     /* 7 */      '--button-contato-2-color',
-     /* 8 */      '--form-name-color',
-     /* 9 */      '--form-email-color',
-     /* 10 */     '--form-msg-color',
-     /* 11 */     '--form-btn-color',
-     /* 12 */     '--form-btn-letter-color'
-      ],
-
-      cores: [
-     /* 0 */   'linear-gradient(90deg, rgba(47,0,47,1) 0%, rgba(241,26,123,1) 0%, rgba(168,18,105,1) 51%, rgba(168,18,105,1) 100%)',
-     /* 1 */   '#FFE5AD',
-     /* 2 */   '#3E001F',
-     /* 3 */   '#8f185d',
-     /* 4 */   'linear-gradient(90deg, rgba(47,0,47,1) 0%, rgba(241,26,123,1) 0%, rgba(143,24,93,1) 52%)',
-     /* 5 */   '#982176'
-      ]
-    }
-  },
-
-  methods: {
-
-    alterarCor(variavelIndex, corIndex) {
-
-      const variavel = this.variaveis[variavelIndex];
-
-      const cor = this.cores[corIndex];
-
-      document.documentElement.style.setProperty(variavel, cor);
-    },
-    voltar() {
-      window.location.reload();
-    }
-  }
+ 
 
 
 
@@ -127,27 +75,7 @@ export default {
 
 </script>
 <style>
-.bloco {
-  display: flex;
-  transform: translate(80px);
-  gap: 20px;
-}
 
-.corOriginal {
-  background-color: #6300a9;
-  border: 2px solid aliceblue;
-  border-radius: 50%;
-  height: 2rem;
-  width: 2rem;
-}
-
-.corRosa {
-  background-color: #F11A7B;
-  border: 2px solid aliceblue;
-  border-radius: 50%;
-  height: 2rem;
-  width: 2rem;
-}
 
 .home-container {
   width: 100%;
