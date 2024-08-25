@@ -56,6 +56,7 @@ export default {
   --primary-color: linear-gradient(to right, rgb(67, 19, 103), rgb(122, 42, 183));
   --secundary-color: rgb(26, 23, 28);
   --letra-color: aliceblue;
+  --secundary-letter-color: aliceblue;
   --projeto-color: rgba(72, 8, 82, 1);
   --projeto-hover-color: rgb(92, 26, 142);
   --button-sobre-color: #6300a9;
