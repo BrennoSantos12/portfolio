@@ -44,7 +44,7 @@
 }
 
 .creditos {
-    color: var(--letra-color);
+    color: var(--secundary-letter-color);
     font-size: 10px;
     display: flex;
     justify-content: flex-end;
@@ -53,7 +53,7 @@
 
 .ctt-titulo {
     display: flex;
-    color: var(--letra-color);
+    color: var(--secundary-letter-color);
     font-size: 4rem;
     margin-top: 6rem;
     transform: translate(0px);
