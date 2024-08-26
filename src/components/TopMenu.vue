@@ -3,8 +3,9 @@
     <div id="myNav" class="overlay">
       <a href="javascript:void(0)" class="closebtn" @click="closeNav()">&times;</a>
       <div class="overlay-content">
+        <h4 class="titulo-cores">Mude as cores do jeito que você quiser!</h4>
         <div class="bloco">
-
+          <h4 class="blocos-titulo">Temas prontos</h4>
           <div class="corOriginal" @click="voltar()"></div>
 
           <div @click="alterarCor(0, 0); alterarCor(1, 1);
@@ -15,17 +16,36 @@
       alterarCor(10, 5); alterarCor(11, 5);
       alterarCor(12, 5); alterarCor(13, 2)" class="corRosa"></div>
 
-          <div @click="
-        alterarCor(0, 6); alterarCor(1, 9); alterarCor(2, 10); alterarCor(3, 9);
-      alterarCor(4, 6); alterarCor(5, 7); alterarCor(6, 8);
-      alterarCor(7, 9); alterarCor(8, 8); alterarCor(9, 8); alterarCor(10, 8);
-      alterarCor(11, 8); alterarCor(12, 8); alterarCor(13, 6);
-      " class="corAzul"></div>
-          <div class="corVermelho" @click="
-        alterarCor(0, 11); alterarCor(1, 9); alterarCor(2, 10); alterarCor(3, 9);
-      alterarCor(4, 11); alterarCor(5, 12); alterarCor(6, 13);
-      alterarCor(7, 9); alterarCor(8, 13); alterarCor(9, 13); alterarCor(10, 13);
-      alterarCor(11, 13); alterarCor(12, 13); alterarCor(13, 11);"></div>
+
+        </div>
+        <div class="cores">
+          <h4 class="cores-titulo">Cores principais</h4>
+          <div class="R-container">
+            <input type="range" name="R" min="0" max="255" value="0" id="R" class="R">
+            <h4>Red</h4>
+          </div>
+          <div class="G-container">
+            <input type="range" name="G" min="0" max="255" value="0" id="G" class="G">
+            <h4>Green</h4>
+          </div>
+          <div class="B-container">
+            <input type="range" name="B" min="0" max="255" value="0" id="B" class="B">
+            <h4>Blue</h4>
+          </div>
+        </div>
+        <div class="painel-container">
+          <h4 class="cores-secundarias">Cores secundarias</h4>
+          <div class="painel-secundaria">
+            <input type="color" name="painel" id="painel" class="painel">
+            <h4>Blocos secundarios</h4>
+          </div>
+          <div class="painel-secundaria">
+            <input type="color" name="painel" id="painel2" class="painel">
+            <h4>Letras</h4>
+          </div>
+
+
+
         </div>
       </div>
     </div>
@@ -61,11 +81,10 @@ export default {
       document.documentElement.style.setProperty(variavel, cor);
     },
 
-
-
     voltar() {
       window.location.reload();
     }
+
   },
   data() {
     return {
@@ -97,32 +116,80 @@ export default {
      /* 4 */   'linear-gradient(90deg, rgba(47,0,47,1) 0%, rgba(241,26,123,1) 0%, rgba(143,24,93,1) 52%)',
      /* 5 */   '#982176',
         /* FIM ROSA */
-        /* BLUE */
-        /* 6 */  'linear-gradient(90deg, rgba(0,34,111,1) 0%, rgba(15,99,186,1) 100%)',
-        /* 7 */   'linear-gradient(90deg, rgba(0,17,54,1) 0%, rgba(8,71,136,1) 100%)',
-        /* 8 */   '#084788',
-        /* 9 */   'aliceblue',
-        /* 10 */  'rgb(26, 23, 28)',
-        /* FIM BLUE */
-        /*  RED */
-        /* 11 */  'linear-gradient(90deg, rgba(255,0,0,1) 0%, rgba(255,65,0,1) 100%)',
-        /* 12 */  'linear-gradient(90deg, rgba(108,11,11,1) 0%, rgba(161,68,0,1) 100%)',
-        /* 13 */  '#a70000',
-        /* FIM RED */
-      ]
+
+      ],
+
     }
   },
+  mounted() {
+    const rangeR = document.getElementById('R');
+    const rangeG = document.getElementById('G');
+    const rangeB = document.getElementById('B');
+
+
+
+    function updateBackgroundColor() {
+      const R = rangeR.value;
+      const G = rangeG.value;
+      const B = rangeB.value;
+
+      const cores = `rgb(${R}, ${G}, ${B})`;
+      document.documentElement.style.setProperty('--primary-color', cores);
+      document.documentElement.style.setProperty('--button-sobre-color', cores);
+      document.documentElement.style.setProperty('--projeto-color', cores);
+      document.documentElement.style.setProperty('--projeto-hover-color', cores);
+      document.documentElement.style.setProperty('--button-contato-2-color', cores);
+      document.documentElement.style.setProperty('--form-name-color', cores);
+      document.documentElement.style.setProperty('--form-email-color', cores);
+      document.documentElement.style.setProperty('--form-msg-color', cores);
+      document.documentElement.style.setProperty('--form-btn-color', cores);
+      document.documentElement.style.setProperty('--button-contato-color', 'aliceblue');
+    }
+
+    rangeR.addEventListener('input', updateBackgroundColor);
+    rangeG.addEventListener('input', updateBackgroundColor);
+    rangeB.addEventListener('input', updateBackgroundColor);
+
+
+
+
+    const painel = document.getElementById("painel");
+    function updatePainel() {
+      const painelValue = painel.value
+      document.documentElement.style.setProperty('--secundary-color', painelValue);
+    }
+    painel.addEventListener('input', updatePainel);
+
+    const painel2 = document.getElementById("painel2");
+
+    function updatePainel2() {
+      const painel2Value = painel2.value
+      document.documentElement.style.setProperty('--letra-color', painel2Value);
+      document.documentElement.style.setProperty('--secundary-letter-color', painel2Value);
+    }
+    painel2.addEventListener('input', updatePainel2);
+
+  }
 
 }
 </script>
 
 
 <style>
+.titulo-cores {
+  color: aliceblue;
+  padding: 2rem;
+}
+
 .bloco {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 20px;
+}
+
+.blocos-titulo {
+  color: aliceblue;
 }
 
 .corOriginal {
@@ -141,24 +208,74 @@ export default {
   width: 2rem;
 }
 
-.corAzul {
-  background: #084788;
-  border: 2px solid aliceblue;
-  border-radius: 50%;
-  height: 2rem;
-  width: 2rem;
+.cores {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 20rem;
 }
 
-.corVermelho {
-  background: #ff0404;
-  border: 2px solid aliceblue;
-  border-radius: 50%;
-  height: 2rem;
-  width: 2rem;
+.cores-titulo {
+  color: aliceblue;
+}
+
+.R-container {
+  display: flex;
+  color: red;
+  flex-direction: column;
+  gap: 60px;
+}
+
+.R {
+  transform: rotate(-90deg);
+}
+
+.G-container {
+  display: flex;
+  color: green;
+  flex-direction: column;
+  gap: 60px;
+}
+
+.G {
+  transform: rotate(-90deg);
+}
+
+.B-container {
+  display: flex;
+  color: blue;
+  flex-direction: column;
+  gap: 60px;
+}
+
+.B {
+  transform: rotate(-90deg);
+}
+
+.painel-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  transform: translateY(-40px);
+}
+
+.cores-secundarias {
+  color: aliceblue;
+}
+
+.painel-secundaria {
+  color: aliceblue;
+}
+
+.painel {
+  background-color: rgb(255, 255, 255);
+  height: 5rem;
+  width: 5rem;
 }
 
 #btn {
-  color: aliceblue;
+  color: var(--letra-color);
   position: fixed;
   margin: 3rem;
   z-index: 10;
@@ -184,6 +301,7 @@ export default {
   top: 25%;
   width: 100%;
   text-align: center;
+  transform: translateY(-60px);
 }
 
 .overlay a {
@@ -223,5 +341,45 @@ export default {
     animation: animacao-bottom 1.5s ease-in-out;
   }
 
+  .cores {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+    height: 20rem;
+  }
+
+  .bloco {
+    flex-direction: column;
+  }
+
+  .R {
+    transform: rotate(0deg);
+  }
+
+  .G {
+    transform: rotate(0deg);
+  }
+
+  .B {
+    transform: rotate(0deg);
+  }
+
+  .R-container {
+    gap: 0;
+  }
+
+  .G-container {
+    gap: 0;
+  }
+
+  .B-container {
+    gap: 0;
+  }
+
+  .painel-container {
+    flex-direction: column;
+    padding: 20px;
+  }
 }
 </style>
