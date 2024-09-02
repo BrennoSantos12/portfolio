@@ -8,7 +8,7 @@
       Busco aventuras e desafios
       no mundo do <span class="span">Front-End</span> para mostrar minhas habilidades de design e código e explorar todo
       meu
-      potencial. <br> Possuo habilidades em: <span class="span">HTML5, CSS3, javascript, Python, Node.js e
+      potencial. <br> Possuo habilidades em: <span class="span">HTML5, CSS3, javascript e
         Vue.js.</span>
       Confira meu portfólio e vamos trabalhar juntos!</h1>
 
