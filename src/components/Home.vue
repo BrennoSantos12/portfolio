@@ -3,7 +3,7 @@
     <div class="titulo-container">
       <h1 class="titulo">Brenno Santos</h1>
       <h2 class="sub-titulo">Front-End Developer</h2>
-     
+
     </div>
 
     <div class="link-container">
@@ -14,7 +14,7 @@
 
     </div>
     <div class="marquee">
-      <h1>‎ HTML5 - CSS3 - JAVASCRIPT - PYTHON - NODE.JS - VUE.JS -</h1>
+      <h1>‎ HTML5 - CSS3 - JAVASCRIPT - VUE.JS -</h1>
     </div>
   </div>
 </template>
@@ -64,7 +64,7 @@ export default {
 
   },
 
- 
+
 
 
 
@@ -75,8 +75,6 @@ export default {
 
 </script>
 <style>
-
-
 .home-container {
   width: 100%;
   z-index: 0;
