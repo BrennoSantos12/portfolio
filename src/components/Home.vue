@@ -2,7 +2,7 @@
   <div class="home-container" id="home-container">
     <div class="titulo-container">
       <h1 class="titulo">Brenno Santos</h1>
-      <h2 class="sub-titulo">Front-End Developer</h2>
+      <h2 class="sub-titulo">Front-End Developer...</h2>
 
     </div>
 
