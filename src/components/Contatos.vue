@@ -5,10 +5,13 @@
             <div class="link1-ctt"> <a href="https://github.com/BrennoSantos12"><img src="@/assets/github branco.png"
                         alt="GitHub" style="height: 4.5rem; width: 4.5rem;"></a></div>
             <div class="link2-ctt"><a href="https://www.linkedin.com/in/brenno-santos-692752290/"><img
-                        src="@/assets/linkedin branco.png" alt="LinkedIn" style="height: 4rem; width: 4rem;"></a></div>
+                        src="@/assets/linkedin-branco_icon.png" alt="LinkedIn" style="height: 4.5rem; width: 4.5rem;"></a></div>
         </div>
     </div>
 
+    <div class="creditos">
+        <h1>© Code by Brenno Santos</h1>
+    </div>
     <div class="email-container">
 
         <button class="clicado1" id="btn-animation">
@@ -30,9 +33,6 @@
 
     </div>
 
-    <div class="creditos">
-        <h1>© Code by Brenno</h1>
-    </div>
 </template>
 
 <style>
@@ -48,7 +48,7 @@
     font-size: 10px;
     display: flex;
     justify-content: flex-end;
-    margin: 3rem;
+    margin: 1rem;
 }
 
 .ctt-titulo {
@@ -99,8 +99,7 @@
 .email-container {
     display: flex;
     margin-left: 10rem;
-    margin-top: -5rem;
-
+    margin-top: -8rem;
 }
 
 .btn-animation:hover {
@@ -301,6 +300,7 @@ form {
         margin-top: 10rem;
         font-size: 1.5rem;
     }
+
 }
 </style>
 

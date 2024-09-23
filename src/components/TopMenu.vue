@@ -9,15 +9,16 @@
           <div class="corOriginal" @click="voltar()"></div>
 
           <div @click="alterarCor(0, 0); alterarCor(1, 1);
-      alterarCor(2, 2); alterarCor(3, 1);
-      alterarCor(4, 4); alterarCor(5, 3);
-      alterarCor(6, 1); alterarCor(7, 1);
-      alterarCor(8, 5); alterarCor(9, 5);
-      alterarCor(10, 5); alterarCor(11, 5);
-      alterarCor(12, 5); alterarCor(13, 2)" class="corRosa"></div>
-
+          alterarCor(2, 2); alterarCor(3, 1);
+          alterarCor(4, 4); alterarCor(5, 3);
+          alterarCor(6, 1); alterarCor(7, 1);
+          alterarCor(8, 5); alterarCor(9, 5);
+          alterarCor(10, 5); alterarCor(11, 5);
+          alterarCor(12, 5); alterarCor(13, 2)" class="corRosa"></div>
+          <div class="rainbow" @click="startEffect()"></div>
 
         </div>
+
         <div class="cores">
           <h4 class="cores-titulo">Cores principais</h4>
           <div class="R-container">
@@ -63,6 +64,30 @@ export default {
   name: 'TopMenu',
 
   methods: {
+    getRandomNumber() {
+      return Math.floor(Math.random() * 256);
+    },
+    generateRandomNumbers() {
+      this.r = this.getRandomNumber();
+      this.g = this.getRandomNumber();
+      this.b = this.getRandomNumber();
+      const cores = `rgb(${this.r}, ${this.g}, ${this.b})`;
+      document.documentElement.style.setProperty('--primary-color', cores);
+      document.documentElement.style.setProperty('--button-sobre-color', cores);
+      document.documentElement.style.setProperty('--projeto-color', cores);
+      document.documentElement.style.setProperty('--projeto-hover-color', cores);
+      document.documentElement.style.setProperty('--button-contato-2-color', cores);
+      document.documentElement.style.setProperty('--form-name-color', cores);
+      document.documentElement.style.setProperty('--form-email-color', cores);
+      document.documentElement.style.setProperty('--form-msg-color', cores);
+      document.documentElement.style.setProperty('--form-btn-color', cores);
+      document.documentElement.style.setProperty('--button-contato-color', 'aliceblue');
+    },
+    startEffect() {
+      if (!this.intervalId) {
+        this.intervalId = setInterval(this.generateRandomNumbers, 2000);
+      }
+    },
 
     openNav() {
       document.getElementById("myNav").style.width = "50%";
@@ -88,6 +113,10 @@ export default {
   },
   data() {
     return {
+      r: 0,
+      g: 0,
+      b: 0,
+      intervalId: null,
 
       variaveis: [
      /* 0 */      '--primary-color',
@@ -122,6 +151,9 @@ export default {
     }
   },
   mounted() {
+
+
+
     const rangeR = document.getElementById('R');
     const rangeG = document.getElementById('G');
     const rangeB = document.getElementById('B');
@@ -144,6 +176,7 @@ export default {
       document.documentElement.style.setProperty('--form-msg-color', cores);
       document.documentElement.style.setProperty('--form-btn-color', cores);
       document.documentElement.style.setProperty('--button-contato-color', 'aliceblue');
+
     }
 
     rangeR.addEventListener('input', updateBackgroundColor);
@@ -208,11 +241,26 @@ export default {
   width: 2rem;
 }
 
+.rainbow {
+  background: linear-gradient(90deg,
+      red,
+      orange,
+      yellow,
+      green,
+      blue,
+      indigo,
+      violet);
+  border: 2px solid aliceblue;
+  border-radius: 50%;
+  height: 2rem;
+  width: 2rem;
+}
+
 .cores {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  height: 20rem;
+  height: 15rem;
 }
 
 .cores-titulo {
@@ -223,34 +271,24 @@ export default {
   display: flex;
   color: red;
   flex-direction: column;
-  gap: 60px;
 }
 
-.R {
-  transform: rotate(-90deg);
-}
 
 .G-container {
   display: flex;
   color: green;
   flex-direction: column;
-  gap: 60px;
-}
 
-.G {
-  transform: rotate(-90deg);
 }
 
 .B-container {
   display: flex;
   color: blue;
   flex-direction: column;
-  gap: 60px;
+
 }
 
-.B {
-  transform: rotate(-90deg);
-}
+
 
 .painel-container {
   display: flex;
@@ -351,18 +389,6 @@ export default {
 
   .bloco {
     flex-direction: column;
-  }
-
-  .R {
-    transform: rotate(0deg);
-  }
-
-  .G {
-    transform: rotate(0deg);
-  }
-
-  .B {
-    transform: rotate(0deg);
   }
 
   .R-container {

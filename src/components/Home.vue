@@ -97,6 +97,7 @@ export default {
 
 #Home {
   height: 100vh;
+  transition: background-color 1.5s ease-in-out;
   background: var(--primary-color);
   color: var(--letra-color);
 
@@ -124,7 +125,7 @@ export default {
   justify-content: baseline;
   flex-direction: column;
   gap: 40px;
-  transform: translate(-20px, -10px)
+  transform: translate(-20px, -10px);
 }
 
 .link1 {
