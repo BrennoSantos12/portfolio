@@ -16,6 +16,7 @@
       <div class="saiba-esconder">
         <h1>Linguagens utilizadas</h1>
         <img src="@/assets/vue_icon.png" alt="Vue.js" class="linguagem">
+        <p>Vue.js</p>
       </div>
     </div>
   </div>
@@ -27,13 +28,27 @@
       <p class="texto-esconder">Advogados associados</p>
     </div>
     <div class="centro-esconder">
-      <a><img src="@/assets/embreve.jpg" style="border-radius: 10px;" alt="em breve" class="img" id="img"></a>
+      <p>clique na imagem para ir até o site</p>
+      <a href="https://amadivocacia.netlify.app/#home" target="_blank"><img src="@/assets/advogados.png" style="border-radius: 10px;" alt="em breve" class="img" id="img"></a>
     </div>
     <div class="saiba-direita">
       <h3 class="saiba">clique para saber mais</h3>
       <div class="saiba-esconder">
-        <h1> </h1>
-        <img>
+        <h1>Linguagens utilizadas</h1>
+        <div class="linguagens-container">
+        <div class="html">
+          <img src="@/assets/html_icon.png" alt="HTML" >
+          <p>HTML</p>
+        </div>
+        <div class="css">
+          <img src="@/assets/css_icon.png" alt="CSS" >
+          <p>CSS</p>
+        </div>
+        <div class="js">
+          <img src="@/assets/javascript_icon.png" alt="JS">
+          <p>JavaScript</p>
+        </div>
+      </div>
       </div>
     </div>
   </div>
@@ -66,7 +81,6 @@
   z-index: 1;
   position: relative;
   background-color: rgb(29, 29, 29);
-
   min-height: 100%;
 }
 
@@ -98,13 +112,34 @@
   font-size: 3rem;
   transition: opacity 0.2s ease-in-out;
 }
+.linguagem {
+  height: 4rem;
+  width: 4rem;
+}
 
+.html {
+  display: flex;
+  flex-direction: column;
+}
+.css {
+  display: flex;
+  flex-direction: column;
+}
+.js {
+  display: flex;
+  flex-direction: column;
+}
 
+.linguagens-container {
+  display: flex;
+  align-items: baseline;
+  justify-content: baseline;
+  text-align: center;
+}
 @media screen and (max-width: 800px) {
   .titulo1 {
     font-size: 1.3rem;
   }
-
   .saiba {
     font-size: 1rem;
   }
