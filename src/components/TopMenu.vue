@@ -15,7 +15,7 @@
           alterarCor(8, 5); alterarCor(9, 5);
           alterarCor(10, 5); alterarCor(11, 5);
           alterarCor(12, 5); alterarCor(13, 2)" class="corRosa"></div>
-          <div class="rainbow" @click="startEffect()"></div>
+
 
         </div>
 
@@ -64,30 +64,6 @@ export default {
   name: 'TopMenu',
 
   methods: {
-    getRandomNumber() {
-      return Math.floor(Math.random() * 256);
-    },
-    generateRandomNumbers() {
-      this.r = this.getRandomNumber();
-      this.g = this.getRandomNumber();
-      this.b = this.getRandomNumber();
-      const cores = `rgb(${this.r}, ${this.g}, ${this.b})`;
-      document.documentElement.style.setProperty('--primary-color', cores);
-      document.documentElement.style.setProperty('--button-sobre-color', cores);
-      document.documentElement.style.setProperty('--projeto-color', cores);
-      document.documentElement.style.setProperty('--projeto-hover-color', cores);
-      document.documentElement.style.setProperty('--button-contato-2-color', cores);
-      document.documentElement.style.setProperty('--form-name-color', cores);
-      document.documentElement.style.setProperty('--form-email-color', cores);
-      document.documentElement.style.setProperty('--form-msg-color', cores);
-      document.documentElement.style.setProperty('--form-btn-color', cores);
-      document.documentElement.style.setProperty('--button-contato-color', 'aliceblue');
-    },
-    startEffect() {
-      if (!this.intervalId) {
-        this.intervalId = setInterval(this.generateRandomNumbers, 2000);
-      }
-    },
 
     openNav() {
       document.getElementById("myNav").style.width = "50%";
@@ -97,8 +73,6 @@ export default {
       document.getElementById("myNav").style.width = "0%";
       document.getElementById("btn").style.visibility = "visible";
     },
-
-
 
     alterarCor(variavelIndex, corIndex) {
       const variavel = this.variaveis[variavelIndex];
@@ -110,14 +84,12 @@ export default {
       window.location.reload();
     }
 
+
+
   },
   data() {
     return {
-      r: 0,
-      g: 0,
-      b: 0,
-      intervalId: null,
-
+     
       variaveis: [
      /* 0 */      '--primary-color',
      /* 1 */      '--letra-color',
@@ -152,8 +124,6 @@ export default {
   },
   mounted() {
 
-
-
     const rangeR = document.getElementById('R');
     const rangeG = document.getElementById('G');
     const rangeB = document.getElementById('B');
@@ -176,14 +146,11 @@ export default {
       document.documentElement.style.setProperty('--form-msg-color', cores);
       document.documentElement.style.setProperty('--form-btn-color', cores);
       document.documentElement.style.setProperty('--button-contato-color', 'aliceblue');
-
     }
 
     rangeR.addEventListener('input', updateBackgroundColor);
     rangeG.addEventListener('input', updateBackgroundColor);
     rangeB.addEventListener('input', updateBackgroundColor);
-
-
 
 
     const painel = document.getElementById("painel");
@@ -240,7 +207,7 @@ export default {
   height: 2rem;
   width: 2rem;
 }
-
+/* 
 .rainbow {
   background: linear-gradient(90deg,
       red,
@@ -254,8 +221,8 @@ export default {
   border-radius: 50%;
   height: 2rem;
   width: 2rem;
-}
-
+} 
+*/
 .cores {
   display: flex;
   justify-content: space-evenly;
