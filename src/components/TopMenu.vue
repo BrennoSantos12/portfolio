@@ -2,7 +2,7 @@
   <div class="top-container">
     <div id="myNav" class="overlay">
       <a href="javascript:void(0)" class="closebtn" @click="closeNav()">&times;</a>
-      <div class="overlay-content">
+      <div class="overlay-content" id="conteudo">
         <h4 class="titulo-cores">Mude as cores do jeito que você quiser!</h4>
         <div class="bloco">
           <h4 class="blocos-titulo">Temas prontos</h4>
@@ -68,10 +68,16 @@ export default {
     openNav() {
       document.getElementById("myNav").style.width = "50%";
       document.getElementById("btn").style.visibility = "hidden";
+      document.getElementById("conteudo").style.visibility = "visible";
+      document.getElementById("conteudo").style.opacity = "1";
     },
     closeNav() {
       document.getElementById("myNav").style.width = "0%";
-      document.getElementById("btn").style.visibility = "visible";
+      setTimeout(function () {
+      document.getElementById("btn").style.visibility = "visible"; 
+      }, 300);
+      document.getElementById("conteudo").style.visibility = "hidden";
+      document.getElementById("conteudo").style.opacity = "0";
     },
 
     alterarCor(variavelIndex, corIndex) {
@@ -307,6 +313,8 @@ export default {
   width: 100%;
   text-align: center;
   transform: translateY(-60px);
+  opacity: 0;
+  transition: opacity 0.6s ease-in-out 0.3s;
 }
 
 .overlay a {
