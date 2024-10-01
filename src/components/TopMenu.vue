@@ -314,7 +314,7 @@ export default {
   text-align: center;
   transform: translateY(-60px);
   opacity: 0;
-  transition: opacity 0.6s ease-in-out 0.3s;
+  transition: opacity 0.3s ease-in-out 0.3s;
 }
 
 .overlay a {
