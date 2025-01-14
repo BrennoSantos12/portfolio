@@ -153,6 +153,7 @@
 .postgres {
   display: flex;
   flex-direction: column;
+  text-align: center;
 }
 .linguagens-container-to-do {
   display: flex;
