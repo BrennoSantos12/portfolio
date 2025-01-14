@@ -56,17 +56,30 @@
 
   <div class="projeto" id="projeto3" v-motion-slide-visible-left :delay="400">
     <div class="projeto-esquerda">
-      <h1 class="titulo1">EM BREVE</h1>
-      <p class="texto-esconder">EM BREVE</p>
+      <h1 class="titulo1">To-Do List FullStack</h1>
+      <p class="texto-esconder">Projeto em React, Spring Boot e banco de dados PostgreSQL de uma To-Do List simples.</p>
     </div>
     <div class="centro-esconder">
-      <img>
+      <a href="https://reactodolistproject.netlify.app" target="_blank"><img src="@/assets/foto_todolist.png" style="border-radius: 10px;" alt="em breve" class="img" id="img"></a>
     </div>
     <div class="saiba-direita">
       <h3 class="saiba">clique para saber mais</h3>
       <div class="saiba-esconder">
-        <h1> </h1>
-        <a><img></a>
+        <h1>Linguagens utilizadas</h1>
+        <div class="linguagens-container-to-do">
+        <div class="react">
+          <img src="@/assets/react_native_react_icon.png" alt="HTML" >
+          <p>React.js</p>
+        </div>
+        <div class="sb">
+          <img src="@/assets/spring_boot_icon.png" alt="CSS" >
+          <p>Spring Boot</p>
+        </div>
+        <div class="postgres">
+          <img src="@/assets/postgresql_icon.png" alt="JS">
+          <p>PostgreSQL</p>
+       </div>
+       </div>
       </div>
     </div>
   </div>
@@ -129,7 +142,25 @@
   display: flex;
   flex-direction: column;
 }
-
+.react {
+  display: flex;
+  flex-direction: column;
+}
+.sb {
+  display: flex;
+  flex-direction: column;
+}
+.postgres {
+  display: flex;
+  flex-direction: column;
+}
+.linguagens-container-to-do {
+  display: flex;
+  align-items: baseline;
+  justify-content: baseline;
+  text-align: center;
+  gap: 20px;
+}
 .linguagens-container {
   display: flex;
   align-items: baseline;
@@ -163,12 +194,15 @@
   .saiba-direita h1 {
     font-size: 0.8rem;
   }
+  
 
   .linguagem {
     width: 30px;
     height: 30px;
     margin: 5px
   }
+
+
 
 }
 
@@ -181,18 +215,13 @@
 }
 
 .linguagem {
-  margin: 2px
+  margin: 2px;
 }
-
 
 .saiba-direita {
   display: flex;
   text-align: center;
 }
-
-
-
-
 
 .texto-esconder {
   opacity: 0;
