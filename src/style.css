@@ -1,0 +1,42 @@
+
+/* eslint-disable */
+/* @tailwind base;
+   @tailwind components;
+   @tailwind utilities; */
+
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Vollkorn:ital,wght@0,400..900;1,400..900&display=swap');
+
+/* @tailwindcss */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+
+.bloco {
+  @apply relative  overflow-hidden inline-block ;
+}
+
+.text-up {
+  @apply block transition-transform duration-300 group-hover:-translate-y-full ease-in-out;
+}
+
+
+.text-bt {
+  @apply block absolute top-full left-0 transition-transform duration-300 group-hover:-translate-y-full ease-in-out;
+}
+
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #341539;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+ }
