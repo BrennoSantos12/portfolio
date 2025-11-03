@@ -9,6 +9,8 @@ function onMousemove(e: any) {
   x.value = e.clientX;
   y.value = e.clientY;
 }
+
+// TESTE PARA VER SE O GIT TA FUNCIONANDO
 </script>
 
 <template>
