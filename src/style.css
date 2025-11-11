@@ -19,22 +19,26 @@
 @tailwind components;
 @tailwind utilities;
 
+
 @layer components {
+  .bloco {
+    @apply relative overflow-hidden inline-block;
+  }
 
-.bloco {
-  @apply relative  overflow-hidden inline-block ;
+  .text-up {
+    @apply block w-full transition-transform duration-300 ease-in-out group-hover:-translate-y-full;
+  }
+
+  .text-bt {
+    @apply block absolute top-full left-0 right-0 w-full transition-transform duration-300 ease-in-out group-hover:-translate-y-full;
+  }
+
+  .bloco.text-end .text-up,
+  .bloco.text-end .text-bt {
+    @apply text-right;
+  }
 }
 
-.text-up {
-  @apply block transition-transform duration-300 group-hover:-translate-y-full ease-in-out;
-}
-
-
-.text-bt {
-  @apply block absolute top-full left-0 transition-transform duration-300 group-hover:-translate-y-full ease-in-out;
-}
-
-}
 
 body {
     margin: 0;
