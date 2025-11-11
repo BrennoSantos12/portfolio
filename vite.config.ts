@@ -1,18 +1,24 @@
-import { fileURLToPath, URL } from 'node:url'
+import { fileURLToPath, URL } from "node:url";
+import { defineConfig } from "vite";
+import vue from "@vitejs/plugin-vue";
 
-import { defineConfig } from 'vite'
-import vue from '@vitejs/plugin-vue'
-import vueDevTools from 'vite-plugin-vue-devtools'
+// importa condicionalmente o devtools
+const plugins = [vue()];
 
-// https://vite.dev/config/
+if (process.env.NODE_ENV !== "production") {
+  try {
+    const vueDevTools = require("vite-plugin-vue-devtools").default;
+    plugins.push(vueDevTools());
+  } catch (e) {
+    console.warn("⚠️ Devtools não carregado:", e.message);
+  }
+}
+
 export default defineConfig({
-  plugins: [
-    vue(),
-    vueDevTools(),
-  ],
+  plugins,
   resolve: {
     alias: {
-      '@': fileURLToPath(new URL('./src', import.meta.url))
+      "@": fileURLToPath(new URL("./src", import.meta.url)),
     },
   },
-})
+});

@@ -1,47 +1,22 @@
 <script setup lang="ts">
 import NavBar from "@/components/NavBar.vue";
-import { ref } from "vue";
-
-const x = ref(0);
-const y = ref(0);
-
-function onMousemove(e: any) {
-  x.value = e.clientX;
-  y.value = e.clientY;
-}
-
-// TESTE PARA VER SE O GIT TA FUNCIONANDO
 </script>
 
 <template>
-  <div
-    @mousemove="onMousemove"
-    class="relative h-screen w-screen text-white overflow-hidden"
-  >
-    <div
-      class="pointer-events-none absolute z-10 w-96 h-96 rounded-full blur-2xl transition-transform duration-75 ease-linear"
-      :style="{
-        transform: `translate(${x - 200}px, ${y - 200}px)`,
-        background:
-          'radial-gradient(circle, rgba(139,92,246,0.2) 0%, rgba(139,92,246,0) 70%)',
-      }"
-    />
-
+  <div class="relative h-screen w-screen text-white overflow-hidden">
     <div class="relative z-20 flex flex-col justify-between h-screen">
       <NavBar />
       <div
         class="relative flex flex-col items-center justify-center text-center"
       >
         <h1
-          class="font-oswald font-extrabold text-gray-100/20 text-[15rem] tracking-tight z-0"
+          class="font-oswald font-extrabold text-gray-100/20 text-[19rem] tracking-tight z-0"
         >
           EXIBA
         </h1>
 
-        <h2
-          class="absolute top-1/2 transform text-5xl font-vollkorn font-light z-10 tracking-[0.2em]"
-        >
-          O PODER DA SUA MARCA.
+        <h2 class="absolute top-1/1 transform text-9xl font-dond z-10">
+          o poder da sua marca.
         </h2>
       </div>
 

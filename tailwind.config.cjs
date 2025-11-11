@@ -8,6 +8,7 @@ module.exports = {
       fontFamily: {
         oswald: ['"Oswald"', "sans-serif"],
         vollkorn: ['"Vollkorn"', "italic"],
+        dond: ['"Dawning of a New Day"', "cursive"],
       },
     },
   },
