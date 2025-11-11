@@ -5,10 +5,9 @@ import NavBar from "@/components/NavBar.vue";
 <template>
   <div class="relative h-screen w-screen text-white overflow-hidden">
     <div class="relative z-20 flex flex-col justify-between h-screen pb-8">
-      <!-- aqui -->
       <NavBar />
       <p
-        class="absolute left-0 top-1/2 translate-x-2 -translate-y-5 rotate-90 origin-left text-[8px] text-white"
+        class="absolute left-0 top-1/2 translate-x-2 -translate-y-10 rotate-90 origin-left text-[8px] text-white"
       >
         @2025 TODOS OS DIREITOS RESERVADOS
       </p>
