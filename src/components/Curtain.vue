@@ -1,70 +1,99 @@
-<template>
-  <transition name="fade">
-    <div
-      v-if="show"
-      class="fixed inset-0 z-50 flex items-center justify-center text-white text-5xl sm:text-6xl font-oswald font-extrabold"
-    >
-      <div
-        class="w-1/2 h-full flex items-center justify-end bg-black transition-transform duration-[1000ms]"
-        :class="{ '-translate-x-full': curtainOpen }"
-      >
-        <div class="relative overflow-hidden pr-4">
-          <span
-            class="block w-full transition-transform duration-700 ease-in-out"
-            :class="{ '-translate-y-full': textUp }"
-          >
-            BRENNO
-          </span>
-          <span
-            class="text-end absolute top-full left-0 right-0 w-full transition-transform duration-700 ease-in-out"
-            :class="{ '-translate-y-full': textUp }"
-          >
-            WEB&nbsp;DEV
-          </span>
-        </div>
-      </div>
-
-      <div
-        class="w-1/2 h-full flex items-center justify-start bg-black transition-transform duration-[1000ms]"
-        :class="{ 'translate-x-full': curtainOpen }"
-      >
-        <div class="relative overflow-hidden">
-          <span
-            class="block w-screen transition-transform duration-700 ease-in-out"
-            :class="{ '-translate-y-full': textUp }"
-          >
-            SANTOS
-          </span>
-          <span
-            class="absolute top-full left-0 right-0 w-full transition-transform duration-700 ease-in-out"
-            :class="{ '-translate-y-full': textUp }"
-          >
-            ELOPER
-          </span>
-        </div>
-      </div>
-    </div>
-  </transition>
-</template>
-
 <script setup lang="ts">
-import { ref, onMounted } from "vue";
+import { ref, onMounted, onUnmounted } from "vue";
+import { useCurtainStore } from "@/stores/curtain";
+
+const curtainStore = useCurtainStore();
 
 const show = ref(true);
-const textUp = ref(false);
+const currentIndex = ref(0);
 const curtainOpen = ref(false);
 
+const words = [
+  { left: "WEB DEV", right: "ELOPER" },
+  { left: "DESIG", right: "NER" },
+  { left: "FRONT", right: "END" },
+  { left: "UX/", right: "UI" },
+  { left: "BRENNO \u200B", right: "SANTOS" },
+];
+
+let wordInterval: number;
+let curtainTimer: number;
+let hideTimer: number;
+
 onMounted(() => {
-  setTimeout(() => {
-    textUp.value = true;
-  }, 700);
+  wordInterval = setInterval(() => {
+    if (currentIndex.value < words.length - 1) {
+      currentIndex.value++;
+    } else {
+      clearInterval(wordInterval);
+    }
+  }, 400);
+  curtainTimer = setTimeout(
+    () => {
+      curtainOpen.value = true;
+      curtainStore.setCurtainFinished();
+    },
+    words.length * 600 + wordInterval,
+  );
 
-  setTimeout(() => {
-    curtainOpen.value = true;
-  }, 2000);
-
-  setTimeout(() => {
+  hideTimer = setTimeout(() => {
     show.value = false;
-  }, 4000);
+  }, words.length * 700);
 });
+
+onUnmounted(() => {
+  clearInterval(wordInterval);
+  clearTimeout(curtainTimer);
+  clearTimeout(hideTimer);
+});
+
+const getTransform = (index: number) => {
+  if (index <= currentIndex.value) {
+    return `translateY(-${(currentIndex.value - index) * 100}%)`;
+  }
+  return "translateY(100%)";
+};
 </script>
+
+<template>
+  <div
+    v-if="show"
+    class="fixed inset-0 z-50 flex items-center justify-center text-white text-4xl sm:text-5xl md:text-6xl font-oswald font-extrabold"
+  >
+    <div
+      class="w-screen h-full flex items-center justify-end bg-black transition-transform duration-[700ms]"
+      :class="{ '-translate-x-full': curtainOpen }"
+    >
+      <div class="relative w-full overflow-hidden h-16 flex items-center">
+        <span
+          v-for="(word, index) in words"
+          :key="`left-${index}`"
+          class="absolute text-right w-full transition-transform duration-500 ease-in-out"
+          :style="{
+            transform: getTransform(index),
+          }"
+        >
+          {{ word.left }}
+        </span>
+      </div>
+    </div>
+
+    <div
+      class="w-screen h-full flex items-center justify-start bg-black transition-transform duration-[700ms]"
+      :class="{ 'translate-x-full': curtainOpen }"
+    >
+      <div class="relative w-full overflow-hidden h-16 flex items-center">
+        <span
+          v-for="(word, index) in words"
+          :key="`right-${index}`"
+          class="absolute w-full transition-transform duration-500 ease-in-out"
+          :style="{
+            transform: getTransform(index),
+          }"
+        >
+          {{ word.right }}
+        </span>
+      </div>
+    </div>
+  </div>
+</template>
