@@ -26,11 +26,11 @@
   }
 
   .text-up {
-    @apply block w-full transition-transform duration-300 ease-in-out group-hover:-translate-y-full;
+    @apply block w-full transition-transform duration-300   ease-in-out group-hover:-translate-y-full;
   }
 
   .text-bt {
-    @apply block absolute top-full left-0 right-0 w-full transition-transform duration-300 ease-in-out group-hover:-translate-y-full;
+    @apply block absolute top-full left-0 right-0 w-full  transition-transform duration-300 ease-in-out group-hover:-translate-y-full;
   }
 
   .bloco.text-end .text-up,

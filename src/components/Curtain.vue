@@ -9,10 +9,11 @@ const currentIndex = ref(0);
 const curtainOpen = ref(false);
 
 const words = [
-  { left: "WEB DEV", right: "ELOPER" },
-  { left: "DESIG", right: "NER" },
-  { left: "FRONT", right: "END" },
-  { left: "UX/", right: "UI" },
+  { left: "FRONTEND \u200BD", right: "EVELOPER" },
+  { left: "BACKEND \u200BD", right: "EVELOPER" },
+  { left: "FREELA", right: "NCER" },
+  { left: "FULL\u200BST", right: "ACK" },
+  { left: "PROBLEM \u200B", right: "SOLVER" },
   { left: "BRENNO \u200B", right: "SANTOS" },
 ];
 
@@ -56,41 +57,29 @@ const getTransform = (index: number) => {
 </script>
 
 <template>
-  <div
-    v-if="show"
-    class="fixed inset-0 z-50 flex items-center justify-center text-white text-4xl sm:text-5xl md:text-6xl font-oswald font-extrabold"
-  >
+  <div v-if="show"
+    class="fixed inset-0 z-50 flex items-center justify-center text-white md:text-8xl text-4xl font-oswald font-extrabold">
     <div
-      class="w-screen h-full flex items-center justify-end bg-black transition-transform duration-[700ms]"
-      :class="{ '-translate-x-full': curtainOpen }"
-    >
-      <div class="relative w-full overflow-hidden h-16 flex items-center">
-        <span
-          v-for="(word, index) in words"
-          :key="`left-${index}`"
-          class="absolute text-right w-full transition-transform duration-500 ease-in-out"
-          :style="{
+      class="w-screen h-full flex items-center justify-end bg-black transition-transform duration-[700ms] overflow-hidden"
+      :class="{ '-translate-x-full': curtainOpen }">
+      <div class="relative w-full overflow-hidden h-[1em] flex items-center">
+        <span v-for="(word, index) in words" :key="`left-${index}`"
+          class="absolute text-right w-full transition-transform duration-500 ease-in-out" :style="{
             transform: getTransform(index),
-          }"
-        >
+          }">
           {{ word.left }}
         </span>
       </div>
     </div>
 
     <div
-      class="w-screen h-full flex items-center justify-start bg-black transition-transform duration-[700ms]"
-      :class="{ 'translate-x-full': curtainOpen }"
-    >
-      <div class="relative w-full overflow-hidden h-16 flex items-center">
-        <span
-          v-for="(word, index) in words"
-          :key="`right-${index}`"
-          class="absolute w-full transition-transform duration-500 ease-in-out"
-          :style="{
+      class="w-screen h-full flex items-center justify-start bg-black transition-transform duration-[700ms] overflow-hidden"
+      :class="{ 'translate-x-full': curtainOpen }">
+      <div class="relative w-full overflow-hidden h-[1em] flex items-center">
+        <span v-for="(word, index) in words" :key="`right-${index}`"
+          class="absolute w-full transition-transform duration-500 ease-in-out" :style="{
             transform: getTransform(index),
-          }"
-        >
+          }">
           {{ word.right }}
         </span>
       </div>

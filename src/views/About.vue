@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { onMounted } from "vue"
 
+const techs = ["Vue 3", "Pinia", "Axios", "FastAPI", "PostgreSQL", "Docker", "Git"]
 
 onMounted(() => {
   const observer = new IntersectionObserver((entries) => {
@@ -8,31 +9,45 @@ onMounted(() => {
       if (entry.isIntersecting) {
         entry.target.classList.add("show")
       } else {
-        entry.target.classList.remove("show");
+        entry.target.classList.remove("show")
       }
     })
   })
 
-  const todosTexto = document.querySelectorAll('.scrollReveal')
-  todosTexto.forEach(el => observer.observe(el))
+  document.querySelectorAll(".scrollReveal2").forEach((el) => observer.observe(el))
 })
 </script>
 
 <template>
-  <div class="h-[120vh] flex flex-col justify-center pl-20 text-white text-8xl font-oswald font-extrabold ">
-    <h1 class="scrollReveal">Eu converto</h1>
-    <h1 class="scrollReveal"> o seu </h1>
-    <h1 class=" scrollReveal text-amber-400">potêncial</h1>
-    <h1 class="scrollReveal ">em arte visual.</h1>
+  <div class="min-h-[150vh] flex flex-col justify-center text-white font-oswald gap-8 px-8 md:px-16">
+    <h1 class="scrollReveal2 text-6xl md:text-8xl font-extrabold">
+      Sobre <span class="text-amber-400">mim</span>
+    </h1>
+
+    <p class="scrollReveal2 text-3xl md:text-6xl w-full md:w-[80%] leading-tight">
+      Desenvolvedor Frontend Júnior na <span class="text-amber-400">Connect</span>, onde construo
+      interfaces e integro APIs FastAPI com JWT para um sistema de gestão geológica.
+      Cursando ADS na FatecSenai e buscando crescer em times que entregam
+      produtos de qualidade.
+    </p>
+
+    <div class="scrollReveal2 flex flex-wrap gap-4 mt-4">
+      <span
+        v-for="tech in techs"
+        :key="tech"
+        class="border border-amber-400 text-amber-400 text-2xl font-bold px-4 py-1"
+      >
+        {{ tech }}
+      </span>
+    </div>
   </div>
 </template>
 
 <style>
-.scrollReveal {
+.scrollReveal2 {
   opacity: 0;
-  transform: translateY(100px);
-  transition: opacity 1.5s ease,
-    transform 1s ease;
+  transform: translateX(-100px);
+  transition: opacity 1.5s ease, transform 1s ease;
 }
 
 .show {
