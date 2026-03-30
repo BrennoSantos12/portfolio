@@ -10,7 +10,7 @@ if (process.env.NODE_ENV !== "production") {
     const vueDevTools = require("vite-plugin-vue-devtools").default;
     plugins.push(vueDevTools());
   } catch (e) {
-    console.warn("⚠️ Devtools não carregado:", e.message);
+    console.warn("⚠️ Devtools não carregado:", (e as Error).message);
   }
 }
 
