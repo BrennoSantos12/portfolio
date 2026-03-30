@@ -47,7 +47,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="min-h-[150vh] flex flex-col justify-center text-white font-oswald px-8 md:px-16 gap-12">
+  <div class="min-h-[150vh] flex flex-col justify-center text-white font-oswald px-8 md:px-16 gap-12 pb-24">
     <h1 class="proj-reveal text-6xl md:text-8xl font-extrabold">
       MEUS <span class="text-amber-400">PROJETOS</span>
     </h1>
