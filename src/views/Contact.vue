@@ -6,6 +6,7 @@ const contacts: { label: string; value: string; link: string; download?: boolean
   { label: "TELEFONE", value: "(65) 98446-4042", link: "tel:+5565984464042" },
   { label: "LOCALIZAÇÃO", value: "Cuiabá / MT", link: "" },
   { label: "CURRÍCULO", value: "DOWNLOAD CV", link: "/CV- Brenno Santos.pdf", download: true },
+  { label: "CURRÍCULO MODELO ATS", value: "DOWNLOAD CV ATS", link: "/Brenno_Santos_ATS.docx", download: true },
 ]
 
 onMounted(() => {
