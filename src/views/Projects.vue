@@ -26,6 +26,12 @@ const projects = [
     techs: ["Vue.js", "Tailwind"],
     link: "https://caudasphotographer.netlify.app",
   },
+  {
+    name: "FBT Music",
+    desc: "Api de músicas Self-hosting com foco em armazenar suas músicas no seu próprio servidor e envia-las para o app FBT Flutter e escutar de forma offline",
+    techs: ["Python", "FastAPI", "yt-dlp", "Flutter"],
+    link: "https://github.com/BrennoSantos12/fbt_music_api",
+  },
 ]
 
 onMounted(() => {

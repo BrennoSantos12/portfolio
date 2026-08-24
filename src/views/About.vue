@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { onMounted } from "vue"
 
-const techs = ["Vue 3", "Pinia", "Axios", "FastAPI", "PostgreSQL", "Docker", "Git"]
+const techs = ["Vue 3", "Pinia", "Axios", "FastAPI", "PostgreSQL", "Docker", "Git", "NestJS", "Python", "Tailscale", "Linux"]
 
 onMounted(() => {
   const observer = new IntersectionObserver((entries) => {
@@ -25,18 +25,17 @@ onMounted(() => {
     </h1>
 
     <p class="scrollReveal2 text-3xl md:text-6xl w-full md:w-[80%] leading-tight">
-      Desenvolvedor Frontend Júnior na <span class="text-amber-400">Connect</span>, onde construo
-      interfaces e integro APIs FastAPI com JWT para um sistema de gestão geológica.
-      Cursando ADS na FatecSenai e buscando crescer em times que entregam
+      Desenvolvedor Frontend Júnior na <span class="text-amber-400">MineralNet</span>, onde construo
+      interfaces e integro APIs FastAPI para um sistema de gestão geológica.
+      <span class="text-amber-400"> Formado </span> em Análise e Desenvolvimento de Sistemas <span
+        class="text-amber-400">(ADS)</span> na UniSenai e
+      buscando crescer em times que entregam
       produtos de qualidade.
     </p>
 
     <div class="scrollReveal2 flex flex-wrap gap-4 mt-4">
-      <span
-        v-for="tech in techs"
-        :key="tech"
-        class="border border-amber-400 text-amber-400 text-2xl font-bold px-4 py-1"
-      >
+      <span v-for="tech in techs" :key="tech"
+        class="border border-amber-400 text-amber-400 text-2xl font-bold px-4 py-1">
         {{ tech }}
       </span>
     </div>
