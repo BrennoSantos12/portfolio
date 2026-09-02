@@ -29,7 +29,7 @@ const projects = [
   {
     name: "FBT Music API",
     desc: "Api de músicas Self-hosting com foco em armazenar suas músicas no seu próprio servidor e envia-las para o app FBT Flutter e escutar de forma offline",
-    techs: ["Python", "FastAPI", "yt-dlp", ""],
+    techs: ["Python", "FastAPI", "yt-dlp"],
     link: "https://github.com/BrennoSantos12/fbt_music_api",
   },
   {
