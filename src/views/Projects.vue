@@ -27,10 +27,34 @@ const projects = [
     link: "https://caudasphotographer.netlify.app",
   },
   {
-    name: "FBT Music",
+    name: "FBT Music API",
     desc: "Api de músicas Self-hosting com foco em armazenar suas músicas no seu próprio servidor e envia-las para o app FBT Flutter e escutar de forma offline",
-    techs: ["Python", "FastAPI", "yt-dlp", "Flutter"],
+    techs: ["Python", "FastAPI", "yt-dlp", ""],
     link: "https://github.com/BrennoSantos12/fbt_music_api",
+  },
+  {
+    name: "FBT Music Flutter",
+    desc: "App Flutter que envia as requisições para a API, armazena no celular e permite o usuário escutar músicas de forma Offline",
+    techs: ["Flutter", "Dart"],
+    link: "https://github.com/BrennoSantos12/fbt_flutter.git",
+  },
+  {
+    name: "FBT Music Web",
+    desc: "Versão Web do FBT para escutar músicas com internet sem precisar baixar nada",
+    techs: ["Vue.js", "Typescript", "Tailwind", "Axios", "Pinia", "Vee-validate", "Zod", "vue-router", "Vite"],
+    link: "https://github.com/BrennoSantos12/fbt_vue.git",
+  },
+  {
+    name: "Server status API",
+    desc: "API para monitoramento de servidores linux com docker e tailscale",
+    techs: ["Python", "FastAPI", "subprocess"],
+    link: "https://github.com/BrennoSantos12/server_status_api.git",
+  },
+  {
+    name: "Server status Web",
+    desc: "Frontend do server_status_api, responsavel por exibir as informações coletadas da API",
+    techs: ["Vue.js", "Typescript", "Tailwind", "Axios", "Pinia", "Vuetify", "vue-router", "Vite"],
+    link: "https://github.com/BrennoSantos12/server_status_frontend.git",
   },
 ]
 
